@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,15 +14,17 @@
 		<title>美迪惠尔 Mediheal MEDIHEAL NUDE GEL MASK金装双倍特强保湿水库针剂裸贴水凝胶面膜 (V3) | 香港莎莎官网</title>
 
 		<!--css-->
-		<link rel="stylesheet" type="text/css" href="css/common.css" />
-		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/iconfont.css' %}" />
 		<!--js-->
-		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
-		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/topbar.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/details.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="{% static 'js/jquery-1.11.0.js' %}"></script>
+		<script src="{% static 'js/common.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'js/topbar.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'js/details.js' %}" type="text/javascript" charset="utf-8"></script>
+        <script src="{% static 'js/cart.js' %}"></script>
 	</head>
 	<body class="productpage">
+
 		<div class="sidebar">
 			<div class="sidebar-box">
 				<div class="box-top">
@@ -30,7 +33,7 @@
 					</div>
 					<div id="myaccount" class="sidetab">
 						<a class="sidebar_link">
-							<i class="iconfont">&#xe609;</i>
+							<i class="iconfont"></i>
 						</a>
 						<a href="" class="sidebar_tip">我的账户
 							<div class="mui-tip">◆</div>
@@ -39,7 +42,7 @@
 					<div class="sidecart">
 						<div class="sidecart-text">
 							<a href="">
-								<i class="iconfont">&#xe601;</i>购物车
+								<i class="iconfont"></i>购物车
 								<b><span>0</span></b>
 							</a>
 						</div>
@@ -47,7 +50,7 @@
 					</div>
 					<div id="myfav" class="sidetab">
 						<a class="sidebar_link">
-							<i class="iconfont">&#xe603;</i>
+							<i class="iconfont"></i>
 						</a>
 						<a href="" class="sidebar_tip">我的收藏
 							<div class="mui-tip">◆</div>
@@ -55,7 +58,7 @@
 					</div>
 					<div id="myhistory" class="sidetab">
 						<a class="sidebar_link">
-							<i class="iconfont">&#xe607;</i>
+							<i class="iconfont"></i>
 						</a>
 						<a href="" class="sidebar_tip">浏览记录
 							<div class="mui-tip">◆</div>
@@ -65,7 +68,7 @@
 				<div class="box-bottom">
 					<div id="myservice" class="sidetab">
 						<a class="sidebar_link">
-							<i class="iconfont">&#xe604;</i>
+							<i class="iconfont"></i>
 						</a>
 						<a href="" class="sidebar_tip">线上客服
 							<div class="mui-tip">◆</div>
@@ -73,18 +76,18 @@
 					</div>
 					<div id="sidecode" class="sidetab">
 						<a class="sidebar_link">
-							<i class="iconfont">&#xe606;</i>
+							<i class="iconfont"></i>
 						</a>
 						<a href="" class="sidebar_tip" style="padding-right: 50px;">
 							<div class="mui-tab-tip" style="margin-top: -50px;">
-								<img src="img/weixin.jpg" width="140px" height="140px" />
+								<img src="{% static  'img/weixin.jpg'  %}" width="140px" height="140px">
 							</div>
 							<div class="mui-tip" style="color: #FFFFFF;">◆</div>
 						</a>
 					</div>
 					<div class="sideup">
 						<div class="sideup-text">
-							<a><i class="iconfont">&#xe608;</i>TOP</a>
+							<a><i class="iconfont"></i>TOP</a>
 						</div>
 					</div>
 				</div>
@@ -93,12 +96,12 @@
 		<div class="topbar">
 			<div class="page">
 				<div class="login-bar">
-					<span id="loginBar">
+					<span id="loginBar" style="display: block;">
 						<span>欢迎光临莎莎官网！</span>
 					<a href="login.html" style="margin-left:10px;">登录</a> <span class="dividing">或 </span>
 					<a href="register.html">免费注册</a>
 					</span>
-					<span id="memberBar">
+					<span id="memberBar" style="display: none;">
 	   				 	<span>您好！<span id="uname"></span></span>
 					<span class="point" style="color:#cb9966;"><b>0</b> 积分</span>
 					<a href="index.html">退出</a>
@@ -109,7 +112,7 @@
 						<li class="line">
 							<div class="member-link">
 								<a href="">
-									<i class="iconfont">&#xe609;</i>我的账户<i class="iconfont min">&#xe60a;</i>
+									<i class="iconfont"></i>我的账户<i class="iconfont min"></i>
 								</a>
 								<dl id="mem_dl_247" style="display: none;">
 									<dd>
@@ -132,12 +135,12 @@
 						</li>
 						<li class="line">
 							<div class="member-link">
-								<a href=""><i class="iconfont">&#xe603;</i>我的收藏</a>
+								<a href=""><i class="iconfont"></i>我的收藏</a>
 							</div>
 						</li>
 						<li class="line">
 							<div class="member-link">
-								<a href=""><i class="iconfont">&#xe602;</i>我的站内信</a>
+								<a href=""><i class="iconfont"></i>我的站内信</a>
 							</div>
 						</li>
 						<li class="line">
@@ -152,12 +155,12 @@
 						</li>
 						<li class="line">
 							<div class="member-link">
-								<a href="">关注我们<i class="iconfont min">&#xe60a;</i></a>
+								<a href="">关注我们<i class="iconfont min"></i></a>
 								<dl class="ajust" id="us_246">
-									<dt><a href=""><img src="img/topbar/add.png" alt="加入收藏" height="12" width="16">加入收藏</a><a href=""><img src="img/topbar/weibo.png" alt="新浪微博" height="15" width="17">新浪微博</a><a href=""><img src="img/topbar/weixin.png" alt="莎莎微信" height="14" width="17">莎莎微信</a><a href=""><img src="img/topbar/youku.png" alt="优酷视频" height="13" width="17">优酷视频</a></dt>
-									<dd style="display: none;"><img src="img/topbar/bigweibo.jpg" alt="新浪微博" width="100px" height="100px"></dd>
-									<dd style="display: none;"><img src="img/topbar/bigweixin.jpg" alt="莎莎微信" width="100px" height="100px"></dd>
-									<dd style="display: none;"><img src="img/topbar/bigyouku.jpg" alt="优酷视频" width="100px" height="100px"></dd>
+									<dt><a href=""><img src="{% static  'img/topbar/add.png'  %}" alt="加入收藏" height="12" width="16">加入收藏</a><a href=""><img src="{% static  'img/topbar/weibo.png'  %}" alt="新浪微博" height="15" width="17">新浪微博</a><a href=""><img src="{% static  'img/topbar/weixin.png'  %}" alt="莎莎微信" height="14" width="17">莎莎微信</a><a href=""><img src="{% static  'img/topbar/youku.png'  %}" alt="优酷视频" height="13" width="17">优酷视频</a></dt>
+									<dd style="display: none;"><img src="{% static  'img/topbar/bigweibo.jpg'  %}" alt="新浪微博" width="100px" height="100px"></dd>
+									<dd style="display: none;"><img src="{% static  'img/topbar/bigweixin.jpg'  %}" alt="莎莎微信" width="100px" height="100px"></dd>
+									<dd style="display: none;"><img src="{% static  'img/topbar/bigyouku.jpg'  %}" alt="优酷视频" width="100px" height="100px"></dd>
 								</dl>
 							</div>
 						</li>
@@ -168,7 +171,7 @@
 		<div class="header-main">
 			<div class="page">
 				<div class="logo">
-					<a href="index.html"><img src="img/logo.png" alt="logo" /></a>
+					<a href="index.html"><img src="{% static  'img/logo.png'  %}" alt="logo"></a>
 				</div>
 				<div class="search">
 					<form>
@@ -190,7 +193,7 @@
 				<div class="top_cart">
 					<div class="cart_bar">
 						<div class="cart_title">
-							<a href="">我的购物车</a>
+							<a href="{% url 'shasha:showcart' %}">我的购物车</a>
 						</div>
 						<div></div>
 					</div>
@@ -217,9 +220,9 @@
 							<a href="#">贵宾专享</a>
 						</li>
 						<li class="nav_item nav_item_more">
-							<a href="#">所有品牌<i class="iconfont">&#xe60c;</i></a>
+							<a href="#">所有品牌<i class="iconfont"></i></a>
 							<div class="nav-box">
-								<i class="iconfont navtip">&#xe608;</i>
+								<i class="iconfont navtip"></i>
 								<h2 class="navtip-text">热门品牌</h2>
 								<div class="clb">
 									<div class="nav-brandtext fl">
@@ -258,28 +261,28 @@
 									<div class="nav-brandpic fr">
 										<ul>
 											<li>
-												<a href=""><img src="img/hotbrand/1.jpg"></a>
+												<a href=""><img src="{% static  'img/hotbrand/1.jpg'  %}"></a>
 											</li>
 											<li>
-												<a href=""><img src="img/hotbrand/2.jpg"></a>
+												<a href=""><img src="{% static  'img/hotbrand/2.jpg'  %}"></a>
 											</li>
 											<li>
-												<a href=""><img src="img/hotbrand/3.jpg"></a>
+												<a href=""><img src="{% static  'img/hotbrand/3.jpg'  %}"></a>
 											</li>
 											<li>
-												<a href=""><img src="img/hotbrand/4.jpg"></a>
+												<a href=""><img src="{% static  'img/hotbrand/4.jpg'  %}"></a>
 											</li>
 											<li>
-												<a href=""><img src="img/hotbrand/5.jpg"></a>
+												<a href=""><img src="{% static  'img/hotbrand/5.jpg'  %}"></a>
 											</li>
 											<li>
-												<a href=""><img src="img/hotbrand/6.jpg"></a>
+												<a href=""><img src="{% static  'img/hotbrand/6.jpg'  %}"></a>
 											</li>
 											<li>
-												<a href=""><img src="img/hotbrand/7.jpg"></a>
+												<a href=""><img src="{% static  'img/hotbrand/7.jpg'  %}"></a>
 											</li>
 											<li>
-												<a href=""><img src="img/hotbrand/8.jpg"></a>
+												<a href=""><img src="{% static  'img/hotbrand/8.jpg'  %}"></a>
 											</li>
 										</ul>
 									</div>
@@ -290,15 +293,15 @@
 				</div>
 				<ul class="nav_icon fr">
 					<li>
-						<img src="img/pinkage.png" alt="" />
+						<img src="{% static  'img/pinkage.png'  %}" alt="">
 						<span class="sp_accordion" style="visibility: visible;">满￥249包邮</span>
 					</li>
 					<li>
-						<img src="img/goldeneye.png" alt="" />
+						<img src="{% static  'img/goldeneye.png'  %}" alt="">
 						<span class="sp_accordion" style="visibility: visible;">正品保证</span>
 					</li>
 					<li>
-						<img src="img/nonstop.png" alt="" />
+						<img src="{% static  'img/nonstop.png'  %}" alt="">
 						<span class="sp_accordion" style="visibility: visible;">香港直送</span>
 					</li>
 				</ul>
@@ -312,7 +315,7 @@
 						<ul class="category_cont">
 							<li class="cat_item">
 								<div class="cat_box">
-									<img class="icon" src="img/hot.png" />
+									<img class="icon" src="{% static  'img/hot.png'  %}">
 									<div class="cat_title">
 										<a href="">热门功效</a>
 									</div>
@@ -340,7 +343,7 @@
 							</li>
 							<li class="cat_item">
 								<div class="cat_box">
-									<img class="icon" src="img/face.png" />
+									<img class="icon" src="{% static  'img/face.png'  %}">
 									<div class="cat_title">
 										<a href="">面部护肤</a>
 									</div>
@@ -379,7 +382,7 @@
 							</li>
 							<li class="cat_item">
 								<div class="cat_box">
-									<img class="icon" src="img/makeup.png" />
+									<img class="icon" src="{% static  'img/makeup.png'  %}">
 									<div class="cat_title">
 										<a href="">彩妆</a>
 									</div>
@@ -416,7 +419,7 @@
 							</li>
 							<li class="cat_item">
 								<div class="cat_box">
-									<img class="icon" src="img/perfume.png" />
+									<img class="icon" src="{% static  'img/perfume.png'  %}">
 									<div class="cat_title">
 										<a href="">香水</a>
 									</div>
@@ -436,7 +439,7 @@
 							</li>
 							<li class="cat_item">
 								<div class="cat_box">
-									<img class="icon" src="img/health.png" />
+									<img class="icon" src="{% static  'img/health.png'  %}">
 									<div class="cat_title">
 										<a href="">健康美肌</a>
 									</div>
@@ -457,7 +460,7 @@
 							</li>
 							<li class="cat_item">
 								<div class="cat_box">
-									<img class="icon" src="img/thinbody.png" />
+									<img class="icon" src="{% static  'img/thinbody.png'  %}">
 									<div class="cat_title">
 										<a href="">纤体美胸</a>
 									</div>
@@ -475,7 +478,7 @@
 							</li>
 							<li class="cat_item">
 								<div class="cat_box">
-									<img class="icon" src="img/nurse.png" />
+									<img class="icon" src="{% static  'img/nurse.png'  %}">
 									<div class="cat_title">
 										<a href="">个人护理</a>
 									</div>
@@ -501,7 +504,7 @@
 							</li>
 							<li class="cat_item">
 								<div class="cat_box">
-									<img class="icon" src="img/boy.png" />
+									<img class="icon" src="{% static  'img/boy.png'  %}">
 									<div class="cat_title">
 										<a href="">男士专区</a>
 									</div>
@@ -518,7 +521,7 @@
 							</li>
 							<li class="cat_item">
 								<div class="cat_box">
-									<img class="icon" src="img/baby.png" />
+									<img class="icon" src="{% static  'img/baby.png'  %}">
 									<div class="cat_title">
 										<a href="">孕婴护理</a>
 									</div>
@@ -590,7 +593,7 @@
 							<s class="zijt"></s>
 							<span class="buy_num fr"><b class="seckiil_soldnums">6</b>人已购买，下手要快哦！</span>
 							<div class="fl" id="time_area" style="width:54%;">
-								<i class="icon iconfont">&#xe60e;</i>
+								<i class="icon iconfont"></i>
 								<span class="now_start_end_time_msg">特卖进行中，完结时间倒数</span>
 								<div class="date-column fr">
 									<span class="day"></span>天
@@ -608,53 +611,53 @@
 									<div class="product-album-preview clearfix">
 										<div class="product-album-pic">
 											<a href="" class="album-preview-container">
-												<img src="img/product/product.jpg" alt="金装双倍特强保湿水库针剂裸贴水凝胶面膜 (V3)" class="small-pic">
+												<img src="" alt="金装双倍特强保湿水库针剂裸贴水凝胶面膜 (V3)" class="small-pic">
 												<div class="album-zooms-handle"></div>
 											</a>
 										</div>
 										<div class="product-album-zoom">
-											<a href="/product-albums-18808.html" title="点击查看大图" target="_blank" class="iconfont">&#xe617;</a>
+
 										</div>
 									</div>
 									<dl class="product-tips clb">
-										<dd><img src="img/newarrivals/korea.png" alt="韩国品牌"> 韩国品牌 </dd>
-										<dd><img src="img/product/good.png" alt="好评中">好评中 </dd>
+										<dd><img src="{{ good.region }}" alt="欧美品牌"> 欧美品牌 </dd>
+										<dd><img src="{% static  'img/product/good.png'  %}" alt="好评中">好评中 </dd>
 									</dl>
 									<div class="product-album-thumb">
 										<div class="flip prev forward">
-											<a class="icon iconfont">&#xe619;</a>
+											<a class="icon iconfont"></a>
 										</div>
 										<div class="thumb_list">
 											<ul style="width: 542px">
 												<li class="active">
 													<div class="thumbnail">
-														<img src="img/product/producta.jpg" width="60" height="60">
+														<img src="{{ good.img_path }}" width="60" height="60">
 													</div>
 												</li>
 												<li>
 													<div class="thumbnail">
-														<img src="img/product/productb.jpg" width="60" height="60">
+														<img src="{{ good.img_path }}" width="60" height="60">
 													</div>
 												</li>
 												<li>
 													<div class="thumbnail">
-														<img src="img/product/productc.jpg" width="60" height="60">
+														<img src="{{ good.img_path }}" width="60" height="60">
 													</div>
 												</li>
 												<li>
 													<div class="thumbnail">
-														<img src="img/product/productd.jpg" width="60" height="60">
+														<img src="{{ good.img_path }}" width="60" height="60">
 													</div>
 												</li>
 												<li>
 													<div class="thumbnail">
-														<img src="img/product/e.jpg" width="60" height="60">
+														<img src="{{ good.img_path }}" width="60" height="60">
 													</div>
 												</li>
 											</ul>
 										</div>
 										<div class="flip next backward over">
-											<a class="iconfont">&#xe618;</a>
+											<a class="iconfont" style="color: rgb(229, 203, 178);"></a>
 										</div>
 									</div>
 								</div>
@@ -662,20 +665,20 @@
 							<div class="product_main fr">
 								<div id="bondedBanner" class="bonded-banner">
 									<span class="bonded_words_show">
-										<img alt="保税仓直送" src="img/product/TAX.jpg">
+										<img alt="保税仓直送" src="{% static  'img/product/TAX.jpg'  %}">
 									</span>
 								</div>
 								<!--标题简介-->
 								<div class="product-titles">
-									<i class="icon iconfont">&#xe612;</i> 含2倍以上的透明质酸和神经酰胺3，天然保湿因子 (N.M.F – Nutrient Moisturizing Factor) 及金缕梅、大马士革玫瑰水等多种保湿成份提炼而成高浓度保湿精华。
+									<i class="icon iconfont"></i> {{ good.longname }}
 								</div>
 								<p class="product-titles2">
 									<b class="yew bonded_words_show" style="display:block;">[保税仓直送]</b>
-									<a href="/brand/l-p-beauty-clinic-mediheal-mediental" target="_blank">
-										美迪惠尔&nbsp;</a>MEDIHEAL NUDE GEL MASK
+									<a href="#" target="_blank">
+										{{ good.name }}&nbsp;</a>
 								</p>
 								<p class="product-titles2">
-									金装双倍特强保湿水库针剂裸贴水凝胶面膜 (V3)&nbsp; (30 克 x 10 )&nbsp;
+									黑色装双倍特强保湿水库针剂裸贴水凝胶口红 (V3)&nbsp; (30 克 x 10 )&nbsp;
 								</p>
 								<!-- 商品基本信息 -->
 								<div class="product_information">
@@ -687,11 +690,29 @@
 												<label class="item-label" for="for_quantity_input">数量：</label>
 												<span class="item-content">
 													<span class="p-quantity">
-														<a href="javascript:void(0);" class="btn-decrease">-</a>
-														<input type="text" name="goods[num]" class="action-quantity-input" value="1" min="1" max="36" limit="36" cartnum="0">
-														<a href="javascript:void(0);" class="btn-increase">+</a>
+		{% if yyy %}
+            <span class="btn-decrease"  data-goodid="{{ good.id }}" href="{% url 'shasha:showcart' %}" style="font-size: 50px;margin: 10px" >-</span>
+        {% else %}
+             <a class="btn-decrease"  data-goodid="{{ good.id }}" href="{% url 'shasha:showcart' %}">-</a>
+        {% endif %}
+
+        {% if num %}
+            <span class="action-quantity-input" style="font-size: 50px;margin: 10px">{{ num }}</span>
+        {% else %}
+            <span class="action-quantity-input" style="font-size: 50px;margin: 10px"></span>
+        {% endif %}
+                                                        
+        {% if yyy %}
+            <span class="btn-increase"  data-goodid="{{ good.id }}" href="{% url 'shasha:showcart' %}" style="font-size: 50px;margin: 10px" >+</span>
+        {% else %}
+            <a class="btn-increase"  data-goodid="{{ good.id }}" href="{% url 'shasha:showcart' %}">+</a>
+        {% endif %}
+
+                                                        
+                                                        
+                                                        
 													</span>
-												<span class="p-store hide"><i class="iconfont">&#xe613;</i></span>
+												<span class="p-store hide"><i class="iconfont"></i></span>
 												</span>
 											</li>
 
@@ -699,7 +720,7 @@
 											<li class="product-buy-price">
 												<ul>
 													<li class="item">
-														<span class="detail">特卖价<b class="price"><ins class="action-price">￥88.0</ins></b><span class="old-price"><del>市场价</del><i class="grey"><del class="action-mktprice">￥315.0</del></i></span></span>
+														<span class="detail">特卖价<b class="price"><ins class="action-price">￥{{ good.price }}</ins></b><span class="old-price"><del>市场价</del><i class="grey"><del class="action-mktprice">￥{{ good.market }}</del></i></span></span>
 													</li>
 												</ul>
 											</li>
@@ -707,15 +728,14 @@
 											<!--购买按钮-->
 											<li class="product-buy-action">
 												<span id="buy_btn">
-													<button  class="btn btn-major btn-huge action-addtocart" rel="_request"><span><span>立即抢购</span></span>
+													<button class="btn btn-major btn-huge action-addtocart" rel="_request" ><span><span>立即抢购</span></span>
 												</button>
 												</span>
 												<span class="code-pro pop-wrapper action-scanbuy">
-        												<button type="button" class="btn action-handle ">扫扫即加入购物车 
-        													<i class="iconfont">&#xe606;</i><i class="iconfont">&#xe60c;</i>
-        												</button>
+        												<span class="btn " data-goodid="{{ good.id }}">加入购物车
+        												</span>
 	    												<div class="pop-body" style="display: none;">
-	      												<img src="img/product/code.png" alt="商品二维码" width="196" height="196">
+{#	      												<img src="{% static  'img/product/code.png'  %}" alt="商品二维码" width="196" height="196">#}
 	   												</div>
       											</span>
 											</li>
@@ -727,13 +747,13 @@
 											<span class="label">评 分</span>
 											<span class="detail">
         											<span class="starNum">
-        												<i class="iconfont">&#xe61a;</i>
-        												<i class="iconfont">&#xe61a;</i>
-        												<i class="iconfont">&#xe61a;</i>
-        												<i class="iconfont">&#xe61a;</i>
-        												<i class="iconfont">&#xe61a;</i>
+        												<i class="iconfont"></i>
+        												<i class="iconfont"></i>
+        												<i class="iconfont"></i>
+        												<i class="iconfont"></i>
+        												<i class="iconfont"></i>
         											</span>
-											<i>(<a href="" >0人评价</a>)</i>
+											<i>(<a href="">0人评价</a>)</i>
 											</span>
 										</div>
 									</div>
@@ -766,7 +786,7 @@
 											</div>
 											<!-- favarite -->
 											<a href="" class="btn btn-rounded btn-addfav fl">
-												<i class="iconfont">&#xe603;</i><i class="text">收藏</i>
+												<i class="iconfont"></i><i class="text">收藏</i>
 											</a>
 										</div>
 									</div>
@@ -774,10 +794,14 @@
 							</div>
 						</form>
 						<!--放大镜-->
-						<div class="album-zooms-container" ><img src=""></div>
+						<div class="album-zooms-container"><img src="{% static  'img/product/producta.jpg'  %}"></div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+{#<script src="/static/js/jiaoben.js"></script>#}
+
 	</body>
+{#<script src="{% static 'js/jiaoben.js' %}"></script>#}
 </html>

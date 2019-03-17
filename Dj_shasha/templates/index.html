@@ -112,8 +112,13 @@
         <div class="login-bar">
 					<span id="loginBar" style="display: block;">
 						<span>欢迎光临莎莎官网！</span>
-					<a href="{% url 'shasha:login' %}" style="margin-left:10px;">登录</a> <span class="dividing">或 </span>
-					<a href="{% url 'shasha:register' %}">免费注册</a>
+                    {% if msg %}
+                        <a href="{% url 'shasha:login' %}" style="margin-left:10px;">{{ msg }}</a> <span class="dividing">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'shasha:logout' %}">注销</a>
+                    {% else %}
+                        <a href="{% url 'shasha:login' %}" style="margin-left:10px;">登录</a> <span class="dividing">或 </span>
+                        <a href="{% url 'shasha:register' %}">免费注册</a>
+                    {% endif %}
 					</span>
             <span id="memberBar" style="display: none;">
 	   				 	<span>您好！<span id="uname"></span></span>
@@ -216,7 +221,7 @@
         <div class="top_cart">
             <div class="cart_bar">
                 <div class="cart_title">
-                    <a href="Shopping Cart.html">我的购物车</a>
+                    <a href="{% url 'shasha:cart' %}">我的购物车</a>
                 </div>
                 <div></div>
             </div>
@@ -699,13 +704,24 @@
             </li>
         </ul>
     </div>
-    <div class="mustad1 mustad" style="background: url() right top no-repeat;"></div>
-    <div class="mustad2 mustad" style="background: url() left top no-repeat;"></div>
+    <div class="mustad1 mustad" style="background:  right top no-repeat;"></div>
+    <div class="mustad2 mustad" style="background:  left top no-repeat;"></div>
 </div>
 <div class="flashsale page">
     <div class="flashsale_head">
         <a href="" target="_blank">查看所有</a>
         <span class="bticon">秒杀商品</span>
+    </div>
+    <div>
+        {% for good in goods %}
+            <div style="width: 300px;float:left;margin-left: 50px">
+                <span style="position: relative;left:170px;top: 40px;color: #ee9c23">进口源：</span>
+                <img src="{{ good.region }}"style="position: relative;top: 50px;left: 180px" >
+                <a href="{% url 'shasha:jump' good.id %}"><img src="{{ good.img_path }}"></a>
+                <span style="color: #ee9c23">{{ good.name }}-仅售{{ good.price }}&nbsp;&nbsp;&nbsp;&nbsp;-原价：{{ good.market }}</span><br>
+                <span style="color: black;"><strong>{{ good.longname }}</strong></span>
+            </div>
+        {% endfor %}
     </div>
     <div class="flashsale_con">
         <ul class="flashsale-list"></ul>

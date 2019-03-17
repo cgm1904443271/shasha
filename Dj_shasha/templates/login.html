@@ -21,7 +21,7 @@
 		<script type="text/javascript" src="{% static 'js/jquery-1.11.0.js' %}"></script>
 		<script src="{% static 'js/jquery.cookie.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'js/topbar.js' %}" type="text/javascript" charset="utf-8"></script>
-{#		<script src="{% static 'js/login.js' %}" type="text/javascript" charset="utf-8"></script>#}
+		<script src="{% static 'js/login.js' %}" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body id="signup">
 				<!--顶部-->
@@ -104,7 +104,7 @@
 				<div class="signin">
 					<div class="sign-title">
 						<div class="sign-title-text">
-							用户登录<span class="fr">还没有莎莎账号？<a href="register.html">立即注册</a></span>
+							用户登录<span class="fr">还没有莎莎账号？<a href="{% url 'shasha:register' %}">立即注册</a></span>
 						</div>
 					</div>
 					<div class="signup_box">
@@ -113,11 +113,11 @@
 							<ul>
 								<li class="form-item">
 									<label for="" class="form-label">邮箱/手机：</label>
-									<span class="form-act"><input class="icon-yhm x-input" type="text" name="uname" value="" placeholder="邮箱/手机" vtype="required"></span>
+									<span class="form-act"><input class="icon-yhm x-input" type="text" name="username"  placeholder="邮箱/手机"></span><span>{{ err1 }}</span>
 								</li>
 								<li class="form-item">
 									<label for="" class="form-label">密码：</label>
-									<span class="form-act"><input class="icon-mm x-input" type="password" name="password" maxlength="16" placeholder="填写密码" oncontextmenu="return false;" onpaste="return false;"></span>
+									<span class="form-act"><input class="icon-mm x-input" type="password" name="password" maxlength="16" placeholder="填写密码"></span><span>{{ err }}</span>
 								</li>
 								<!--<li class="form-item action-verifycode hide">
 									<label for="" class="form-label">验证码：</label>
@@ -135,9 +135,9 @@
 									<label for="" class="form-label"></label>
 									<span class="form-act"><input type="checkbox" name="site_autologin" id="for_auto_signin" class="x-check action-auto-signin"><label for="" class="form-sub-label">记住我</label><a href="/passport-lost.html" style="color:#ed3f7e;">忘记密码？</a></span>
 								</li>
-								<li class="form-item-normal"><label for="" class="form-label"></label>
-									<span class="form-act"><button type="submit" class="btn btn-major btn-big" rel="_request"><span><span>登录</span></span>
-									</button>
+								<li class="form-item-normal">
+									<span class="form-act">
+                                        <input class="btn btn-major btn-big" type="submit" value="登录">
 									</span>
 								</li>
 							</ul>

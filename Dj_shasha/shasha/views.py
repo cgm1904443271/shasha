@@ -2,16 +2,27 @@ import hashlib
 import random
 import time
 
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from shasha.models import Img, User
+from shasha.models import Img, User, Goods, Cart
 
 
 def index(request):
     imgs=Img.objects.all()
+    goods=Goods.objects.all()
 
-    return render(request,'index.html',context={'imgs':imgs})
+
+    token=request.session.get('token')
+    user=None
+    if token:
+        user=User.objects.filter(token=token)
+        user=user.first()
+
+        return render(request,'index.html',context={'imgs':imgs,'msg':'已登录','goods':goods})
+    else:
+        return render(request,'index.html',context={'imgs':imgs,'goods':goods})
 
 def genareter_tooken():
     temp = str(time.time()) + str(random.random())
@@ -51,6 +62,127 @@ def login(request):
                 user.token=genareter_tooken()
                 user.save()
                 request.session['token']=user.token
+                response = redirect('shasha:index')
 
 
-                return redirect('shasha:index')
+                return response
+            else:
+                return render(request, 'login.html',context={'err':'密码错误'})
+        else:
+            return render(request, 'login.html',context={'err1':'账号输入有误'})
+
+
+def logout(request):
+    request.session.flush()
+
+    return redirect('shasha:index')
+
+
+def jump(request,a):
+    good=Goods.objects.get(pk=a)
+    token = request.session.get('token')
+    if token:
+        yyy = True
+        user = User.objects.get(token=token)
+        carts = Cart.objects.filter(user=user).filter(goods=good).first()
+        if carts:
+            num = carts.number
+            return render(request, 'Product Details.html', context={'good': good, 'num': num, 'yyy': yyy})
+        else:
+            num = '0'
+            return render(request, 'Product Details.html', context={'good': good,'num':num,'yyy':yyy})
+    else:
+        return render(request,'Product Details.html',context={'good':good})
+
+
+def showcart(request):
+    token = request.session.get('token')
+    if token:
+        goodid = request.GET.get('goodid')
+        user = User.objects.get(token=token)
+        goods = Goods.objects.get(pk=goodid)
+
+        carts = Cart.objects.filter(user=user).filter(goods=goods)
+        if carts.exists():
+            cart=carts.first()
+            cart.number +=1
+            cart.save()
+        else:
+            cart = Cart()
+            cart.user=user
+            cart.goods=goods
+            cart.number=1
+            cart.save()
+
+        response_data={
+            'msg':'111',
+            'number':cart.number,
+            'status':1
+        }
+
+        return JsonResponse(response_data)
+    else:
+        return render(request,'login.html')
+
+
+
+def subcart(request):
+    goodid = request.GET.get('goodid')
+    token = request.session.get('token')
+    if token:
+        user = User.objects.get(token=token)
+        goods = Goods.objects.get(pk=goodid)
+
+        cart = Cart.objects.filter(user=user).filter(goods=goods).first()
+
+        cart.number -=1
+        num = cart.number
+        if num <=0:
+            num=0
+        cart.number=num
+        cart.save()
+
+
+    response_data={
+        'msg':'111',
+        'number':cart.number,
+    }
+
+
+    return JsonResponse(response_data)
+
+
+
+
+def cart(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+
+    if user:
+        cartss = Cart.objects.filter(user=user)
+        carts=[]
+        for item in cartss:
+            if item.number>0:
+                carts.append(item)
+        numbers=0
+        price=0
+        for i in range(len(carts)):
+            cart=carts[i]
+            m=cart.number
+            p = float(cart.goods.price)*int(m)
+            numbers +=m
+            price +=p
+
+
+        return render(request, 'Shopping Cart.html', context={
+            'carts': carts,
+            'price':price,
+            'number':numbers,
+        })
+    else:
+        return render(request,'login.html')
+
+
+
+
+

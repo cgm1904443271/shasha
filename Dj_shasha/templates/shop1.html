@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+</head>
+<body>
+<div style="width: 300px;float:left;margin-left: 50px">
+    <span style="position: relative;left:170px;top: 40px;color: #ee9c23">进口源：</span>
+    <img src="{{ good.region }}" style="position: relative;top: 50px;left: 180px">
+    <a href="{% url 'shasha:jump' good.id %}"><img src="{{ good.img_path }}"></a>
+    <span style="color: #ee9c23">{{ good.name }}-仅售{{ good.price }}&nbsp;&nbsp;&nbsp;&nbsp;-原价：{{ good.market }}</span><br>
+    <span style="color: black;"><strong>{{ good.longname }}</strong></span>
+</div>
+</body>
+</html>

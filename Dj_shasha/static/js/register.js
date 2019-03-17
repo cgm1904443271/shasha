@@ -158,11 +158,11 @@ $(function() {
 			console.log( $.cookie("users") );
 			var success = $('<div class="success"><i class="iconfont">&#xe616;</i>注册成功</div>');
 			$('body').append(success);
-			// setTimeout(function() {
-			// 	$('body').find('.success').remove();
-			// 	 window.location.href="login.html";
-			// }, 3000);
+			setTimeout(function() {
+				$('body').find('.success').remove();
+				 window.location.href="login.html";
+			}, 3000);
     		}
-    		return false;
+    		// return false;
     })
 })
