@@ -728,12 +728,12 @@
 											<!--购买按钮-->
 											<li class="product-buy-action">
 												<span id="buy_btn">
-													<button class="btn btn-major btn-huge action-addtocart" rel="_request" ><span><span>立即抢购</span></span>
-												</button>
+													<a class="btn btn-major btn-huge action-addtocart" href="{% url 'shasha:generateorder' %}" ><span><span>立即抢购</span></span>
+												</a>
 												</span>
 												<span class="code-pro pop-wrapper action-scanbuy">
-        												<span class="btn " data-goodid="{{ good.id }}">加入购物车
-        												</span>
+        												<a href="{% url 'shasha:cart' %}">查看购物车
+        												</a>
 	    												<div class="pop-body" style="display: none;">
 {#	      												<img src="{% static  'img/product/code.png'  %}" alt="商品二维码" width="196" height="196">#}
 	   												</div>

@@ -12,4 +12,7 @@ urlpatterns=[
     url(r'^subcart/$',views.subcart,name='subcart'),
     # url(r'^spcart/$',views.spcart,name='spcart'),
     url(r'^cart/$',views.cart,name='cart'),
+    url(r'^generateorder/$',views.generateorder,name='generateorder'),
+    url(r'^orderlist/$',views.orderlist,name='orderlist'),
+    url(r'^orderdetail/$(\d+)$',views.orderdetail,name='orderdetail')
 ]

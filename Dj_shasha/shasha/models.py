@@ -41,4 +41,23 @@ class Cart(models.Model):
 
 class Order(models.Model):
     user = models.ForeignKey(User)
+    createtime = models.DateTimeField(auto_now_add=True)
+    updatetime = models.DateTimeField(auto_now=True)
+    status = models.IntegerField(default=0)
+    order_number = models.CharField(max_length=255)
+
+    class Meta:
+        db_table='ss_order'
+
+
+class OrderGoods(models.Model):
+    order = models.ForeignKey(Order)
+    goods = models.ForeignKey(Goods)
+    number = models.IntegerField()
+
+    class Meta:
+        db_table='ss_ordergood'
+
+
+
 

@@ -6,7 +6,7 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from shasha.models import Img, User, Goods, Cart
+from shasha.models import Img, User, Goods, Cart, Order, OrderGoods
 
 
 def index(request):
@@ -156,9 +156,10 @@ def subcart(request):
 
 def cart(request):
     token = request.session.get('token')
-    user = User.objects.get(token=token)
 
-    if user:
+
+    if token:
+        user = User.objects.get(token=token)
         cartss = Cart.objects.filter(user=user)
         carts=[]
         for item in cartss:
@@ -172,6 +173,7 @@ def cart(request):
             p = float(cart.goods.price)*int(m)
             numbers +=m
             price +=p
+            goodid = cart.goods.id
 
 
         return render(request, 'Shopping Cart.html', context={
@@ -183,6 +185,50 @@ def cart(request):
         return render(request,'login.html')
 
 
+def generate_number():
+    temp =str(random.randrange(1000,10000))+str(random.randrange(1000,10000))
+
+    return temp
+
+
+def generateorder(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+
+    order = Order()
+    order.user = user
+    order.order_number = generate_number()
+    order.save()
+
+    carts = user.cart_set.filter(number__gt=0)
+    if carts.exists():
+        for cart in carts:
+            orderGoods = OrderGoods()
+            orderGoods.order = order
+            orderGoods.goods = cart.goods
+            orderGoods.number = cart.number
+            orderGoods.save()
+
+            cart.delete()
+
+
+        return render(request,'ordertail.html',context={'order':order})
+    else:
+        return render(request,'Shopping Cart.html')
+
+
+def orderlist(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+    orders = user.order_set.all()
+    return render(request, 'orderlist.html',context={
+        'orders':orders
+    })
 
 
 
+
+def orderdetail(request,order_number):
+    order = Order.objects.get(order_number=order_number)
+
+    return render(request,'ordertail.html',context={'order':order})

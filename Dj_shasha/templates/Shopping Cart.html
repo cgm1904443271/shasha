@@ -22,79 +22,12 @@
 		<script src="{% static 'js/shopcart.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'js/common.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'js/topbar.js' %}" type="text/javascript" charset="utf-8"></script>
+        <script src="{% static 'js/spcart.js' %}"></script>
 	</head>
 	<body class="cart">
 
 		<div class="sidebar">
-			<div class="sidebar-box">
-				<div class="box-top">
-					<div class="explain">
-						<a href="http://www.sasa.com/customer_notice" target="_blank">选购境外商品须知</a>
-					</div>
-					<div id="myaccount" class="sidetab">
-						<a class="sidebar_link">
-							<i class="iconfont"></i>
-						</a>
-						<a href="" class="sidebar_tip">我的账户
-							<div class="mui-tip">◆</div>
-						</a>
-					</div>
-					<div class="sidecart">
-						<div class="sidecart-text">
-							<a>
-								<i class="iconfont"></i>购物车
-								<b><span>0</span></b>
-							</a>
-						</div>
-						<div class="sidecart-cont ui-sidecart-cont" id="js_sidecart">
-							<div class="cart-conttitle"><button class="btn-close" id="js_closecart" title="关闭" type="button"><i class="iconfont"></i></button>购物车</div>
-							<div id="js_updatecart" class="J-updatecart"><div class="no-information ui-sidecart-empty">购物车中还没有商品，赶紧选购吧！</div></div>
-						</div>
-					</div>
-					<div id="myfav" class="sidetab">
-						<a class="sidebar_link">
-							<i class="iconfont"></i>
-						</a>
-						<a href="" class="sidebar_tip">我的收藏
-							<div class="mui-tip">◆</div>
-						</a>
-					</div>
-					<div id="myhistory" class="sidetab">
-						<a class="sidebar_link">
-							<i class="iconfont"></i>
-						</a>
-						<a href="" class="sidebar_tip">浏览记录
-							<div class="mui-tip">◆</div>
-						</a>
-					</div>
-				</div>
-				<div class="box-bottom">
-					<div id="myservice" class="sidetab">
-						<a class="sidebar_link">
-							<i class="iconfont"></i>
-						</a>
-						<a href="" class="sidebar_tip">线上客服
-							<div class="mui-tip">◆</div>
-						</a>
-					</div>
-					<div id="sidecode" class="sidetab">
-						<a class="sidebar_link">
-							<i class="iconfont"></i>
-						</a>
-						<a href="" class="sidebar_tip" style="padding-right: 50px;">
-							<div class="mui-tab-tip" style="margin-top: -50px;">
-								<img src="{% static  'img/weixin.jpg'  %}" width="140px" height="140px">
-							</div>
-							<div class="mui-tip" style="color: #FFFFFF;">◆</div>
-						</a>
-					</div>
-					<div class="sideup">
-						<div class="sideup-text">
-							<a><i class="iconfont"></i>TOP</a>
-						</div>
-					</div>
-				</div>
-			</div>
+
 		</div>
 		<div class="topbar">
 			<div class="page">
@@ -211,35 +144,9 @@
 								</td>
 							</tr>
 
-						</tbody><tbody id="J_cartPromotionCont">
-							<tr>
-								<td>
-									<table class="ui-cart-table ui-cart-promotiontable">
-										<thead>
-											<tr>
-												<th class="ui-carttable-th1">已享受的优惠</th>
-												<th class="ui-carttable-th2">优惠项目</th>
-                                            {% for cart in carts %}
-                                                <th style="width: 100px;height: 100px"><img src="{{ cart.goods.img_path }}" style="width: 100%;height: 100%"><span>{{ cart.goods.name }}<p class="num">数量：{{ cart.number}}</p><p class="price-num">单价：{{ cart.goods.price }}</p></span></th>
-                                            {% endfor %}
-											</tr>
-										</thead>
-										<!-- 商品 -->
-										<tbody id="J_cartPromotion">
-											<tr>
-												<td class="ui-carttable-td1"> </td>
-												<td class="ui-carttable-td2">
-													<i class="tipyel" style="margin-right: 6px;background-color:#71D2C3;color:#FFFFFF;">订单促销</i>满￥249免运费 </td>
-												<td> </td>
-												<td> </td>
-												<td> </td>
-												<td> </td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-						</tbody>
+                        {% for cart in carts %}
+                            <div style="width: 100%;height: 130px;margin-top: 10px"><a href="{% url 'shasha:jump' cart.goods.id%}"><img src="{{ cart.goods.img_path }}" style="width: 100px;height: 100px"></a><span style="margin-left: 30px">{{ cart.goods.name }}</span><span class="num" style="margin-left: 30px">数量：{{ cart.number}}</span><span class="price-num" style="margin-left: 30px">单价：{{ cart.goods.price }}</span><span style="margin-left: 30px;font-size: 2rem;color: pink">修改数量请点击图片</span></div>
+                        {% endfor %}
 						<tfoot id="J_cartPriceCont" class="ui-cart-foot">
 							<tr>
 								<td>
@@ -250,14 +157,17 @@
 												<td class="ui-cartfoot-check">
 													<div class="fl">
 														<a href="index.html" class="ui-cartfoot-link mr20">继续购物</a>
-														<a id="J_actionClean" class="ui-cartfoot-link">清空购物车</a>
+														<a id="J_actionClean" href="{% url 'shasha:orderlist' %}">查看订单</a>
 													</div>
 													<div class="fr">
 														<span class="ui-cartfoot-label">共 <span class="red items-quantity">{{number}}</span> 件商品</span>
 														<span class="ui-cartfoot-label">商品应付金额
                 <strong class="red f18 promotion-subtotal ui-cart-total">¥{{ price }}</strong>
               </span>
-														<button type="submit" class="btn btn-import btn-huge action-settle" rel="_request"><span><span>结账</span></span></button>
+
+                                                            <a href="{% url 'shasha:generateorder' %}">
+                                                            <input type="button" style="margin-right: 10px" class="btn btn-import btn-huge action-settle" value="下单">
+                                                            </a>
 													</div>
 												</td>
 											</tr>
