@@ -1,0 +1,21 @@
+.pay{
+    width: 50px;
+    height:50px;
+    color: black;
+    background-color: black;
+    margin-left: 30px;
+}
+.paytb{
+    width: 50px;
+    height:50px;
+    color: white;
+    background-color: white;
+    margin-left: 30px;
+}
+.payall{
+    width: 50px;
+    height:50px;
+    color: black;
+    background-color: black;
+    margin-left: 30px;
+}

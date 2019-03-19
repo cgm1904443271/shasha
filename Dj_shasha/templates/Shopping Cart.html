@@ -17,10 +17,11 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'css/iconfont.css' %}" />
 		<link rel="stylesheet" type="text/css" href="{% static 'css/cart.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/shopcart.css' %}"/>
 		<!--js-->
 		<script type="text/javascript" src="{% static 'js/jquery-1.11.0.js' %}"></script>
 		<script src="{% static 'js/jquery.cookie.js' %}" type="text/javascript" charset="utf-8"></script>
-		<script src="{% static 'js/shopcart.js' %}" type="text/javascript" charset="utf-8"></script>
+{#		<script src="{% static 'js/shopcart.js' %}" type="text/javascript" charset="utf-8"></script>#}
 		<script src="{% static 'js/common.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'js/topbar.js' %}" type="text/javascript" charset="utf-8"></script>
         <script src="{% static 'js/spcart.js' %}"></script>
@@ -153,7 +154,7 @@
                                 <span class="price-num" style="margin-left: 30px">单价：{{ cart.goods.price }}</span>
                                 <span class="jian" style="font-size: 50px;margin-left:30px " data-goodid="{{ cart.goods.id }}">-</span>
                                 <span class="jia" style="font-size: 50px;margin-left:30px " data-goodid="{{ cart.goods.id }}">+</span>
-                                <span class="pay" style="width: 50px;height:50px;color: pink;margin-left: 30px;font-size: 30px" data-goodid="{{ cart.goods.id }}">买</span>
+                                <span class="pay"  data-goodid="{{ cart.goods.id }}">@</span>
                             </div>
                         {% endfor %}
 						<tfoot id="J_cartPriceCont" class="ui-cart-foot">
@@ -167,6 +168,7 @@
 													<div class="fl">
 														<a href="index.html" class="ui-cartfoot-link mr20">继续购物</a>
 														<a id="J_actionClean" href="{% url 'shasha:orderlist' %}">查看订单</a>
+                                                        <span class="payall"  data-isall="{{ cart.selection }}">@</span>
 													</div>
 													<div class="fr">
 														<span class="ui-cartfoot-label">共 <span class="red items-quantity">{{number}}</span> 件商品</span>

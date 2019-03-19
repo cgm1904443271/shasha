@@ -35,6 +35,7 @@ class Cart(models.Model):
     goods = models.ForeignKey(Goods)
     number = models.IntegerField()
     selection = models.IntegerField(default=1)
+    selectionall = models.IntegerField(default=1)
 
 
     class Meta:

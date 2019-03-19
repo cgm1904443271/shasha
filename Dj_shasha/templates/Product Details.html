@@ -21,7 +21,7 @@
 		<script src="{% static 'js/common.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'js/topbar.js' %}" type="text/javascript" charset="utf-8"></script>
 		<script src="{% static 'js/details.js' %}" type="text/javascript" charset="utf-8"></script>
-        <script src="{% static 'js/cart.js' %}"></script>
+        <script src="{% static 'js/addcart.js' %}"></script>
 	</head>
 	<body class="productpage">
 
@@ -693,19 +693,19 @@
 		{% if yyy %}
             <span class="btn-decrease"  data-goodid="{{ good.id }}"  style="font-size: 50px;margin: 10px" >-</span>
         {% else %}
-             <a class="btn-decrease"  data-goodid="{{ good.id }}" href="{% url 'shasha:showcart' %}">-</a>
+             <a class="btn-decrease"  data-goodid="{{ good.id }}" href="{% url 'shasha:addcart' %}">-</a>
         {% endif %}
 
-        {% if num %}
+
             <span class="action-quantity-input" style="font-size: 50px;margin: 10px">0</span>
-        {% else %}
-            <span class="action-quantity-input" style="font-size: 50px;margin: 10px"></span>
-        {% endif %}
+
+
+
                                                         
         {% if yyy %}
             <span class="btn-increase"  data-goodid="{{ good.id }}" style="font-size: 50px;margin: 10px" >+</span>
         {% else %}
-            <a class="btn-increase"  data-goodid="{{ good.id }}" href="{% url 'shasha:showcart' %}">+</a>
+            <a class="btn-increases"  data-goodid="1" href="{% url 'shasha:addcart' %}">+</a>
         {% endif %}
 
                                                         

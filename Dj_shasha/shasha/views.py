@@ -86,12 +86,9 @@ def jump(request,a):
         yyy = True
         user = User.objects.get(token=token)
         carts = Cart.objects.filter(user=user).filter(goods=good).first()
-        if carts:
-            num = carts.number
-            return render(request, 'Product Details.html', context={'good': good, 'num': num, 'yyy': yyy})
-        else:
-            num = '0'
-            return render(request, 'Product Details.html', context={'good': good,'num':num,'yyy':yyy})
+
+        return render(request, 'Product Details.html', context={'good': good,'yyy': yyy})
+
     else:
         return render(request,'Product Details.html',context={'good':good})
 
@@ -241,6 +238,35 @@ def pay(request):
     return JsonResponse(response_data)
 
 
+def payall(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+
+    carts = Cart.objects.filter(user=user)
+    p=0
+    n=0
+    for cart in carts:
+        if cart.selectionall==1:
+            cart.selection = 0
+            cart.selectionall =0
+            n += cart.number
+            p += float(cart.goods.price) * int(cart.number)
+            cart.save()
+            selectionall = cart.selectionall
+        else:
+            cart.selection = 1
+            cart.selectionall = 1
+            n += cart.number
+            p += float(cart.goods.price) * int(cart.number)
+            cart.save()
+            selectionall = cart.selectionall
+
+    response_data={
+        'selectionall':selectionall,
+        'numn':n,
+        'pricec':p
+    }
+    return JsonResponse(response_data)
 
 
 def cart(request):
@@ -283,18 +309,20 @@ def generateorder(request):
     token = request.session.get('token')
     if token:
         user = User.objects.get(token=token)
+        order = Order()
+        order.user = user
+        order.order_number = generate_number()
+        order.save()
 
-        carts = user.cart_set.filter(selection=1)
+        carts = user.cart_set.all()
         if carts.exists():
             for cart in carts:
-                if cart.number=='0':
+                if cart.number==0:
                     cart.delete()
 
+                elif cart.selection==0:
+                    cart.delete()
                 else:
-                    order = Order()
-                    order.user = user
-                    order.order_number = generate_number()
-                    order.save()
 
                     orderGoods = OrderGoods()
                     orderGoods.order = order
@@ -364,6 +392,5 @@ def app_notify_url(request):
 #     }
 #
 #     return JsonResponse(response_data)
-
 
 

@@ -12,9 +12,8 @@ $(function () {
     var num=0
         $(function () {
             $('.btn-increase').click(function () {
-
                     num++
-                    console.log(num)
+                    // console.log(num)
                     $(this).prev().html(num)
                 // request_data = {
                 //     'goodid':$(this).attr('data-goodid')
