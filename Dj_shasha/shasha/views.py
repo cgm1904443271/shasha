@@ -7,6 +7,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 # from shasha.alipay import alipay
+from alipay import alipay
 from shasha.models import Img, User, Goods, Cart, Order, OrderGoods
 
 
@@ -206,7 +207,7 @@ def subcart(request):
     return JsonResponse(response_data)
 
 
-def pay(request):
+def payy(request):
     token = request.session.get('token')
     user = User.objects.get(token=token)
     goodid = request.GET.get('goodid')
@@ -357,7 +358,7 @@ def orderdetail(request,order_number):
 
 
 def returnurl(request):
-    return render(request,'orderlist.html')
+    return redirect('shasha:orderlist')
 
 
 def app_notify_url(request):
@@ -365,32 +366,36 @@ def app_notify_url(request):
     return JsonResponse({'msg':'success'})
 
 
-# def pay(request):
-#     # print(request.GET.get('orderid'))
-#     orderid = request.GET.get('orderid')
-#     order = Order.objects.get(pk=orderid)
-#
-#     sum = 0
-#     for orderGoods in order.ordergoods_set.all():
-#         sum += orderGoods.goods.price*orderGoods.number
-#
-#     sum = float(sum)
-#     #支付地址信息
-#     data = alipay.direct_pay(
-#         subject='口红 [10000]->[100]', # 显示标题
-#         out_trade_no=order.order_number, # shasha订单号
-#         total_amount=sum, #支付金额
-#         return_url="http://47.100.99.45/shasha/returnurl/",
-#     )
-#     #支付地址
-#     alipay_url ='https://openapi.alipaydev.com/gateway.do?{data}'.format(data=data)
-#
-#     response_data={
-#         'msg':'调用支付接口',
-#         'alipayurl':alipay_url,
-#         'status':1
-#     }
-#
-#     return JsonResponse(response_data)
+def pay(request):
+    # print(request.GET.get('orderid'))
+    orderid = request.GET.get('orderid')
+    order = Order.objects.get(pk=orderid)
+
+
+    sum = 0
+    for orderGoods in order.ordergoods_set.all():
+        sum += orderGoods.goods.price*orderGoods.number
+
+    sum = float(sum)
+    #支付地址信息
+    data = alipay.direct_pay(
+        subject='口红 [10000]->[100]', # 显示标题
+        out_trade_no=order.order_number, # shasha订单号
+        total_amount=sum, #支付金额
+        return_url="http://47.100.99.45/shasha/returnurl/",
+    )
+    #支付地址
+    alipay_url ='https://openapi.alipaydev.com/gateway.do?{data}'.format(data=data)
+
+    response_data={
+        'msg':'调用支付接口',
+        'alipayurl':alipay_url,
+        'status':1
+    }
+    order.status = 1
+    order.save()
+
+
+    return JsonResponse(response_data)
 
 

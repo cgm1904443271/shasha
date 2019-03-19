@@ -724,3 +724,392 @@ Not Found: /shasha/index/img/mustad/right2.jpg
 [pid: 29849|app: 0|req: 48/48] 113.88.13.180 () {42 vars in 831 bytes} [Mon Mar 18 06:01:53 2019] GET /shasha/index/img/mustad/right2.jpg => generated 4039 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
 Not Found: /
 [pid: 29849|app: 0|req: 49/49] 47.101.204.203 () {34 vars in 460 bytes} [Mon Mar 18 06:27:35 2019] GET / => generated 2020 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Mar 18 14:40:08 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 06:44:04
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: iZuf619yi8aisqha9zb595Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /ss/www/shasha
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/shasha/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /ss/www/shasha
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7849
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8090 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xcc3270
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xcc3270 pid: 29896 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 29896, cores: 1)
+[pid: 29896|app: 0|req: 1/1] 113.88.13.180 () {44 vars in 852 bytes} [Mon Mar 18 06:40:35 2019] GET /shasha/index/ => generated 48414 bytes in 56 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/banner.json
+[pid: 29896|app: 0|req: 2/2] 113.88.13.180 () {44 vars in 867 bytes} [Mon Mar 18 06:40:35 2019] GET /shasha/index/json/banner.json => generated 4402 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/flashsale.json
+[pid: 29896|app: 0|req: 3/3] 113.88.14.120 () {44 vars in 873 bytes} [Mon Mar 18 06:40:35 2019] GET /shasha/index/json/flashsale.json => generated 4411 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/newarrivals.json
+[pid: 29896|app: 0|req: 4/4] 113.88.13.180 () {44 vars in 877 bytes} [Mon Mar 18 06:40:35 2019] GET /shasha/index/json/newarrivals.json => generated 4417 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/hotbrands.json
+[pid: 29896|app: 0|req: 5/5] 113.88.14.120 () {44 vars in 873 bytes} [Mon Mar 18 06:40:35 2019] GET /shasha/index/json/hotbrands.json => generated 4411 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 6/6] 113.88.14.120 () {42 vars in 827 bytes} [Mon Mar 18 06:40:54 2019] GET /shasha/returnurl => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 123 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 7/7] 113.88.14.120 () {42 vars in 829 bytes} [Mon Mar 18 06:40:54 2019] GET /shasha/returnurl/ => generated 147 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 8/8] 113.88.14.120 () {44 vars in 860 bytes} [Mon Mar 18 06:40:59 2019] GET /shasha/returnurl/ => generated 147 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 9/9] 113.88.14.120 () {44 vars in 860 bytes} [Mon Mar 18 06:41:00 2019] GET /shasha/returnurl/ => generated 147 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 10/10] 113.88.14.120 () {42 vars in 833 bytes} [Mon Mar 18 06:42:37 2019] GET /shasha/appnotifyurl => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 126 bytes (1 switches on core 0)
+支付成功
+[pid: 29896|app: 0|req: 11/11] 113.88.14.120 () {42 vars in 835 bytes} [Mon Mar 18 06:42:37 2019] GET /shasha/appnotifyurl/ => generated 18 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 12/12] 217.60.229.142 () {38 vars in 591 bytes} [Mon Mar 18 06:52:50 2019] GET / => generated 2020 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 13/13] 47.92.54.139 () {34 vars in 458 bytes} [Mon Mar 18 07:47:19 2019] GET / => generated 2020 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 14/14] 217.112.220.226 () {32 vars in 445 bytes} [Mon Mar 18 07:59:56 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 15/15] 101.132.33.158 () {34 vars in 460 bytes} [Mon Mar 18 08:23:36 2019] GET / => generated 2020 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 16/16] 95.47.203.227 () {32 vars in 444 bytes} [Mon Mar 18 09:09:23 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 17/17] 47.92.133.31 () {34 vars in 458 bytes} [Mon Mar 18 09:23:12 2019] GET / => generated 2020 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 18/18] 113.88.13.180 () {42 vars in 821 bytes} [Mon Mar 18 11:00:44 2019] GET /shasha/index/ => generated 48414 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/banner.json
+[pid: 29896|app: 0|req: 19/19] 113.88.13.180 () {44 vars in 867 bytes} [Mon Mar 18 11:00:45 2019] GET /shasha/index/json/banner.json => generated 4402 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/flashsale.json
+[pid: 29896|app: 0|req: 20/20] 113.88.14.120 () {44 vars in 873 bytes} [Mon Mar 18 11:00:45 2019] GET /shasha/index/json/flashsale.json => generated 4411 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/newarrivals.json
+[pid: 29896|app: 0|req: 21/21] 113.88.14.120 () {44 vars in 877 bytes} [Mon Mar 18 11:00:45 2019] GET /shasha/index/json/newarrivals.json => generated 4417 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/hotbrands.json
+[pid: 29896|app: 0|req: 22/22] 113.88.14.120 () {44 vars in 873 bytes} [Mon Mar 18 11:00:45 2019] GET /shasha/index/json/hotbrands.json => generated 4411 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/img/mustad/left3.jpg
+[pid: 29896|app: 0|req: 23/23] 113.88.14.120 () {42 vars in 829 bytes} [Mon Mar 18 11:00:50 2019] GET /shasha/index/img/mustad/left3.jpg => generated 4414 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/img/mustad/right3.jpg
+[pid: 29896|app: 0|req: 24/24] 113.88.14.120 () {42 vars in 831 bytes} [Mon Mar 18 11:00:50 2019] GET /shasha/index/img/mustad/right3.jpg => generated 4417 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 25/25] 113.88.14.120 () {44 vars in 870 bytes} [Mon Mar 18 11:00:51 2019] GET /shasha/jump/1 => generated 30305 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/banner.json
+[pid: 29896|app: 0|req: 26/26] 113.88.14.120 () {44 vars in 865 bytes} [Mon Mar 18 11:00:52 2019] GET /shasha/jump/json/banner.json => generated 4399 bytes in 6 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/flashsale.json
+[pid: 29896|app: 0|req: 27/27] 113.88.14.120 () {44 vars in 871 bytes} [Mon Mar 18 11:00:52 2019] GET /shasha/jump/json/flashsale.json => generated 4408 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/newarrivals.json
+[pid: 29896|app: 0|req: 28/28] 113.88.14.120 () {44 vars in 875 bytes} [Mon Mar 18 11:00:52 2019] GET /shasha/jump/json/newarrivals.json => generated 4414 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/hotbrands.json
+[pid: 29896|app: 0|req: 29/29] 113.88.13.180 () {44 vars in 871 bytes} [Mon Mar 18 11:00:52 2019] GET /shasha/jump/json/hotbrands.json => generated 4408 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 30/30] 113.88.13.180 () {44 vars in 815 bytes} [Mon Mar 18 11:00:54 2019] GET /shasha/showcart/?goodid=1 => generated 40 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 114 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 31/31] 113.88.13.180 () {44 vars in 868 bytes} [Mon Mar 18 11:00:55 2019] GET /shasha/cart/ => generated 7427 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 124 bytes (1 switches on core 0)
+Not Found: /shasha/cart/json/banner.json
+[pid: 29896|app: 0|req: 32/32] 113.88.13.180 () {44 vars in 864 bytes} [Mon Mar 18 11:00:56 2019] GET /shasha/cart/json/banner.json => generated 4399 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/cart/json/flashsale.json
+[pid: 29896|app: 0|req: 33/33] 113.88.14.120 () {44 vars in 870 bytes} [Mon Mar 18 11:00:56 2019] GET /shasha/cart/json/flashsale.json => generated 4408 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/cart/json/newarrivals.json
+[pid: 29896|app: 0|req: 34/34] 113.88.14.120 () {44 vars in 874 bytes} [Mon Mar 18 11:00:56 2019] GET /shasha/cart/json/newarrivals.json => generated 4414 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/cart/json/hotbrands.json
+[pid: 29896|app: 0|req: 35/35] 113.88.14.120 () {44 vars in 870 bytes} [Mon Mar 18 11:00:56 2019] GET /shasha/cart/json/hotbrands.json => generated 4408 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 29896|app: 0|req: 36/36] 216.245.197.254 () {26 vars in 285 bytes} [Mon Mar 18 12:32:50 2019] HEAD /robots.txt => generated 55122 bytes in 46 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /cache/global/img/gs.gif
+[pid: 29896|app: 0|req: 37/37] 80.82.70.187 () {32 vars in 414 bytes} [Mon Mar 18 12:46:09 2019] GET /cache/global/img/gs.gif => generated 2108 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 38/38] 168.232.12.98 () {32 vars in 450 bytes} [Mon Mar 18 13:00:00 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 39/39] 47.100.126.89 () {34 vars in 459 bytes} [Mon Mar 18 14:42:35 2019] GET / => generated 2020 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 40/40] 78.188.63.155 () {32 vars in 444 bytes} [Mon Mar 18 14:57:14 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 41/41] 87.2.102.73 () {32 vars in 442 bytes} [Mon Mar 18 16:38:43 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 42/42] 151.237.194.33 () {32 vars in 445 bytes} [Mon Mar 18 17:00:57 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 43/43] 109.111.131.76 () {32 vars in 444 bytes} [Mon Mar 18 17:14:37 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 29896|app: 0|req: 44/44] 47.94.52.159 () {26 vars in 261 bytes} [Mon Mar 18 17:31:32 2019] GET / => generated 54992 bytes in 32 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 45/45] 36.68.134.252 () {32 vars in 450 bytes} [Mon Mar 18 18:39:59 2019] GET / => generated 2023 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /.git/config
+[pid: 29896|app: 0|req: 46/46] 198.167.223.52 () {36 vars in 577 bytes} [Mon Mar 18 19:03:37 2019] GET /.git/config => generated 2071 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: ''. The domain name provided is not valid according to RFC 1034/1035.
+[pid: 29896|app: 0|req: 47/47] 47.97.21.76 () {26 vars in 260 bytes} [Mon Mar 18 19:19:29 2019] GET / => generated 54991 bytes in 34 msecs (HTTP/1.0 400) 1 headers in 53 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 48/48] 197.157.192.245 () {32 vars in 445 bytes} [Mon Mar 18 20:18:03 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 49/49] 178.239.150.48 () {32 vars in 451 bytes} [Mon Mar 18 20:45:08 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 50/50] 201.76.119.192 () {32 vars in 445 bytes} [Mon Mar 18 21:04:10 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /
+[pid: 29896|app: 0|req: 51/51] 181.174.34.218 () {32 vars in 444 bytes} [Mon Mar 18 21:38:56 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 52/52] 177.104.252.72 () {32 vars in 445 bytes} [Mon Mar 18 22:51:03 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /cache/global/img/gs.gif
+[pid: 29896|app: 0|req: 53/53] 80.82.70.187 () {32 vars in 414 bytes} [Mon Mar 18 23:05:31 2019] GET /cache/global/img/gs.gif => generated 2108 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 54/54] 179.98.94.14 () {32 vars in 442 bytes} [Mon Mar 18 23:08:51 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 55/55] 179.98.94.14 () {32 vars in 442 bytes} [Mon Mar 18 23:08:51 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 56/56] 110.138.218.18 () {32 vars in 444 bytes} [Tue Mar 19 00:09:38 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 57/57] 191.242.34.71 () {32 vars in 443 bytes} [Tue Mar 19 00:36:12 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+invalid request block size: 21573 (max 4096)...skip
+Not Found: /
+[pid: 29896|app: 0|req: 58/58] 116.62.215.53 () {34 vars in 459 bytes} [Tue Mar 19 01:01:07 2019] GET / => generated 2020 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 59/59] 47.92.4.72 () {34 vars in 524 bytes} [Tue Mar 19 01:56:55 2019] GET /shasha/showcart/?goodid=1 => generated 7992 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 60/60] 139.224.238.50 () {34 vars in 505 bytes} [Tue Mar 19 01:58:09 2019] GET /shasha/index/ => generated 48406 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 61/61] 39.107.126.72 () {34 vars in 504 bytes} [Tue Mar 19 01:59:47 2019] GET /shasha/jump/1 => generated 30217 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 62/62] 120.79.184.41 () {34 vars in 510 bytes} [Tue Mar 19 02:00:46 2019] GET /shasha/showcart/ => generated 7992 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 63/63] 58.42.188.242 () {36 vars in 542 bytes} [Tue Mar 19 02:49:54 2019] GET / => generated 2020 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /HNAP1/
+[pid: 29896|app: 0|req: 64/64] 58.42.188.242 () {38 vars in 590 bytes} [Tue Mar 19 02:49:55 2019] GET /HNAP1/ => generated 2056 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /shasha/generateorder/
+Traceback (most recent call last):
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./shasha/views.py", line 196, in generateorder
+    user = User.objects.get(token=token)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/models/query.py", line 380, in get
+    self.model._meta.object_name
+shasha.models.DoesNotExist: User matching query does not exist.
+[pid: 29896|app: 0|req: 65/65] 39.107.126.72 () {34 vars in 520 bytes} [Tue Mar 19 03:36:40 2019] GET /shasha/generateorder/ => generated 66471 bytes in 46 msecs (HTTP/1.1 500) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 66/66] 47.92.39.202 () {34 vars in 499 bytes} [Tue Mar 19 03:44:03 2019] GET /shasha/cart => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 118 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 67/67] 47.92.39.202 () {34 vars in 501 bytes} [Tue Mar 19 03:44:03 2019] GET /shasha/cart/ => generated 7992 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 68/68] 47.92.151.67 () {34 vars in 515 bytes} [Tue Mar 19 03:45:14 2019] GET /shasha/appnotifyurl => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 126 bytes (1 switches on core 0)
+支付成功
+[pid: 29896|app: 0|req: 69/69] 47.92.151.67 () {34 vars in 517 bytes} [Tue Mar 19 03:45:14 2019] GET /shasha/appnotifyurl/ => generated 18 bytes in 0 msecs (HTTP/1.1 200) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 70/70] 120.79.206.221 () {34 vars in 511 bytes} [Tue Mar 19 03:48:37 2019] GET /shasha/register/ => generated 8158 bytes in 3 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 71/71] 101.132.97.6 () {34 vars in 531 bytes} [Tue Mar 19 03:51:45 2019] GET /shasha/orderdetail/96491650 => generated 346 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 72/72] 47.97.204.168 () {34 vars in 510 bytes} [Tue Mar 19 04:05:53 2019] GET /shasha/returnurl => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 123 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 73/73] 47.97.204.168 () {34 vars in 512 bytes} [Tue Mar 19 04:05:53 2019] GET /shasha/returnurl/ => generated 147 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 74/74] 47.97.120.5 () {34 vars in 500 bytes} [Tue Mar 19 04:06:40 2019] GET /shasha/cart/ => generated 7992 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 278 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 75/75] 107.170.202.182 () {34 vars in 375 bytes} [Tue Mar 19 04:12:44 2019] GET / => generated 2020 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 76/76] 47.98.60.52 () {34 vars in 510 bytes} [Tue Mar 19 04:27:54 2019] GET /shasha/returnurl/ => generated 147 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 77/77] 119.28.222.178 () {34 vars in 374 bytes} [Tue Mar 19 05:12:10 2019] GET / => generated 2020 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /
+[pid: 29896|app: 0|req: 78/78] 107.6.169.250 () {34 vars in 462 bytes} [Tue Mar 19 05:32:11 2019] GET / => generated 2020 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 29896|app: 0|req: 79/79] 113.110.230.113 () {42 vars in 823 bytes} [Tue Mar 19 05:58:20 2019] GET /shasha/index/ => generated 48414 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/banner.json
+[pid: 29896|app: 0|req: 80/80] 113.110.230.113 () {44 vars in 869 bytes} [Tue Mar 19 05:58:21 2019] GET /shasha/index/json/banner.json => generated 4402 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/flashsale.json
+[pid: 29896|app: 0|req: 81/81] 113.87.163.220 () {44 vars in 874 bytes} [Tue Mar 19 05:58:21 2019] GET /shasha/index/json/flashsale.json => generated 4411 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/newarrivals.json
+[pid: 29896|app: 0|req: 82/82] 113.110.230.113 () {44 vars in 879 bytes} [Tue Mar 19 05:58:21 2019] GET /shasha/index/json/newarrivals.json => generated 4417 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/hotbrands.json
+[pid: 29896|app: 0|req: 83/83] 113.110.230.113 () {44 vars in 875 bytes} [Tue Mar 19 05:58:21 2019] GET /shasha/index/json/hotbrands.json => generated 4411 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Mar 19 14:14:05 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 06:44:04
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: iZuf619yi8aisqha9zb595Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /ss/www/shasha
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/shasha/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /ss/www/shasha
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7849
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8090 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x181c270
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x181c270 pid: 31046 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 31046, cores: 1)
+[pid: 31046|app: 0|req: 1/1] 113.110.230.113 () {42 vars in 823 bytes} [Tue Mar 19 06:14:23 2019] GET /shasha/index/ => generated 48414 bytes in 52 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/banner.json
+[pid: 31046|app: 0|req: 2/2] 113.110.230.113 () {44 vars in 869 bytes} [Tue Mar 19 06:14:23 2019] GET /shasha/index/json/banner.json => generated 4935 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/flashsale.json
+[pid: 31046|app: 0|req: 3/3] 113.87.163.220 () {44 vars in 874 bytes} [Tue Mar 19 06:14:23 2019] GET /shasha/index/json/flashsale.json => generated 4944 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/newarrivals.json
+[pid: 31046|app: 0|req: 4/4] 113.110.230.113 () {44 vars in 879 bytes} [Tue Mar 19 06:14:23 2019] GET /shasha/index/json/newarrivals.json => generated 4950 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/json/hotbrands.json
+[pid: 31046|app: 0|req: 5/5] 113.110.230.113 () {44 vars in 875 bytes} [Tue Mar 19 06:14:23 2019] GET /shasha/index/json/hotbrands.json => generated 4944 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/img/mustad/left2.jpg
+[pid: 31046|app: 0|req: 6/6] 113.110.230.113 () {42 vars in 831 bytes} [Tue Mar 19 06:14:24 2019] GET /shasha/index/img/mustad/left2.jpg => generated 4947 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/index/img/mustad/right2.jpg
+[pid: 31046|app: 0|req: 7/7] 113.110.230.113 () {42 vars in 833 bytes} [Tue Mar 19 06:14:24 2019] GET /shasha/index/img/mustad/right2.jpg => generated 4950 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Internal Server Error: /shasha/jump/3
+Traceback (most recent call last):
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'ss_cart.selection' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./shasha/views.py", line 88, in jump
+    carts = Cart.objects.filter(user=user).filter(goods=good).first()
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/models/query.py", line 564, in first
+    objects = list((self if self.ordered else self.order_by('pk'))[:1])
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/models/query.py", line 250, in __iter__
+    self._fetch_all()
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 894, in execute_sql
+    raise original_exception
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 884, in execute_sql
+    cursor.execute(sql, params)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/backends/utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/root/.virtualenv/shasha/lib/python3.5/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.InternalError: (1054, "Unknown column 'ss_cart.selection' in 'field list'")
+[pid: 31046|app: 0|req: 8/8] 113.110.230.113 () {44 vars in 872 bytes} [Tue Mar 19 06:14:26 2019] GET /shasha/jump/3 => generated 188525 bytes in 103 msecs (HTTP/1.1 500) 4 headers in 130 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 31046|app: 0|req: 9/9] 113.110.230.113 () {42 vars in 787 bytes} [Tue Mar 19 06:14:26 2019] GET /favicon.ico => generated 2071 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Mar 19 14:19:46 2019] ***
+compiled with version: 5.4.0 20160609 on 13 March 2019 06:44:04
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: iZuf619yi8aisqha9zb595Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /ss/www/shasha
+writing pidfile to uwsgi.pid
+detected binary path: /root/.virtualenv/shasha/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /ss/www/shasha
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 7849
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 0.0.0.0:8090 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2415270
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 72904 bytes (71 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x2415270 pid: 31062 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI worker 1 (and the only) (pid: 31062, cores: 1)
+[pid: 31062|app: 0|req: 1/1] 113.87.163.220 () {44 vars in 853 bytes} [Tue Mar 19 06:19:57 2019] GET /shasha/jump/3 => generated 30226 bytes in 47 msecs (HTTP/1.1 200) 4 headers in 196 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/banner.json
+[pid: 31062|app: 0|req: 2/2] 113.87.163.220 () {44 vars in 822 bytes} [Tue Mar 19 06:19:57 2019] GET /shasha/jump/json/banner.json => generated 4932 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/flashsale.json
+[pid: 31062|app: 0|req: 3/3] 113.110.230.113 () {44 vars in 829 bytes} [Tue Mar 19 06:19:57 2019] GET /shasha/jump/json/flashsale.json => generated 4941 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/newarrivals.json
+[pid: 31062|app: 0|req: 4/4] 113.87.163.220 () {44 vars in 832 bytes} [Tue Mar 19 06:19:57 2019] GET /shasha/jump/json/newarrivals.json => generated 4947 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/hotbrands.json
+[pid: 31062|app: 0|req: 5/5] 113.110.230.113 () {44 vars in 829 bytes} [Tue Mar 19 06:19:57 2019] GET /shasha/jump/json/hotbrands.json => generated 4941 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 31062|app: 0|req: 6/6] 113.110.230.113 () {42 vars in 779 bytes} [Tue Mar 19 06:20:01 2019] GET /shasha/index/ => generated 48406 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /
+[pid: 31062|app: 0|req: 7/7] 179.127.119.231 () {32 vars in 445 bytes} [Tue Mar 19 06:39:19 2019] GET / => generated 2023 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Forbidden (CSRF cookie not set.): /shasha/appnotifyurl/
+[pid: 31062|app: 0|req: 8/8] 140.205.118.88 () {34 vars in 507 bytes} [Tue Mar 19 06:40:51 2019] POST /shasha/appnotifyurl/ => generated 2857 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 31062|app: 0|req: 9/9] 113.110.230.113 () {44 vars in 2261 bytes} [Tue Mar 19 06:41:00 2019] GET /shasha/returnurl/?charset=utf-8&out_trade_no=81996130&method=alipay.trade.page.pay.return&total_amount=507.00&sign=h1H2jrenjGnAnWsL8sSClaujed79C0yQS5rw3xex4l%2Bfknmi%2BMWb6hwLZsOYp9kgYbvp8N5PVzg2ZOX0zUc3FGwsyyDoqLZCs2oiY8%2BIhPI%2Blfpn1oBMCEB5DYhpY%2FhMFGwAhRo8LCAOgwcyATd1VLDjkMfwwTRiIQyhI9SLHLJoqSTSutvvobSjZ2dF0JUYBRgNHgKsM0d5De10hcgQ%2FER82w9%2FgHX34te6yqcUQg2O8G7q0iyte9Oh7Zq%2FH3alP4p5HwDXYg8F%2BP3bougElzMshnfz7tEGjLsyQ6MjRMJUXbqLtSNgCmp1G2ZetaoW66J4OSK8K3iDQzsA7HuW%2BQ%3D%3D&trade_no=2019031922001445111000001001&auth_app_id=2016092800612139&version=1.0&app_id=2016092800612139&sign_type=RSA2&seller_id=2088102177580430&timestamp=2019-03-19+14%3A40%3A57 => generated 147 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 31062|app: 0|req: 10/10] 113.110.230.113 () {44 vars in 2107 bytes} [Tue Mar 19 06:41:04 2019] GET /shasha/returnurl/?charset=utf-8&out_trade_no=81996130&method=alipay.trade.page.pay.return&total_amount=507.00&sign=h1H2jrenjGnAnWsL8sSClaujed79C0yQS5rw3xex4l%2Bfknmi%2BMWb6hwLZsOYp9kgYbvp8N5PVzg2ZOX0zUc3FGwsyyDoqLZCs2oiY8%2BIhPI%2Blfpn1oBMCEB5DYhpY%2FhMFGwAhRo8LCAOgwcyATd1VLDjkMfwwTRiIQyhI9SLHLJoqSTSutvvobSjZ2dF0JUYBRgNHgKsM0d5De10hcgQ%2FER82w9%2FgHX34te6yqcUQg2O8G7q0iyte9Oh7Zq%2FH3alP4p5HwDXYg8F%2BP3bougElzMshnfz7tEGjLsyQ6MjRMJUXbqLtSNgCmp1G2ZetaoW66J4OSK8K3iDQzsA7HuW%2BQ%3D%3D&trade_no=2019031922001445111000001001&auth_app_id=2016092800612139&version=1.0&app_id=2016092800612139&sign_type=RSA2&seller_id=2088102177580430&timestamp=2019-03-19+14%3A40%3A57 => generated 147 bytes in 2 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 31062|app: 0|req: 11/11] 113.110.230.113 () {44 vars in 828 bytes} [Tue Mar 19 06:41:14 2019] GET /shasha/jump/3 => generated 30226 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 125 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/banner.json
+[pid: 31062|app: 0|req: 12/12] 113.110.230.113 () {44 vars in 823 bytes} [Tue Mar 19 06:41:14 2019] GET /shasha/jump/json/banner.json => generated 4932 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/flashsale.json
+[pid: 31062|app: 0|req: 13/13] 113.110.230.113 () {44 vars in 829 bytes} [Tue Mar 19 06:41:14 2019] GET /shasha/jump/json/flashsale.json => generated 4941 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/newarrivals.json
+[pid: 31062|app: 0|req: 14/14] 113.110.230.113 () {44 vars in 833 bytes} [Tue Mar 19 06:41:14 2019] GET /shasha/jump/json/newarrivals.json => generated 4947 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /shasha/jump/json/hotbrands.json
+[pid: 31062|app: 0|req: 15/15] 113.110.230.113 () {44 vars in 829 bytes} [Tue Mar 19 06:41:14 2019] GET /shasha/jump/json/hotbrands.json => generated 4941 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+Forbidden (CSRF cookie not set.): /shasha/appnotifyurl/
+[pid: 31062|app: 0|req: 16/16] 140.205.118.143 () {34 vars in 508 bytes} [Tue Mar 19 06:42:27 2019] POST /shasha/appnotifyurl/ => generated 2857 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 31062|app: 0|req: 17/17] 113.110.230.113 () {44 vars in 2253 bytes} [Tue Mar 19 06:42:37 2019] GET /shasha/returnurl/?charset=utf-8&out_trade_no=14775115&method=alipay.trade.page.pay.return&total_amount=100.00&sign=sPqJfZoDN17%2BDvfv1BScCH24cnF2vsFS9dIUNCh%2B5HFEWUa9jKvIjEuVXRpWkl1NuBW%2By85NIV5bMhOLXvhgDa4P0eVlQu1AkoH8Op5j%2F2BtcjKaM9v2x8Cm49WgIJAScmIxsYeAK4loJdCFFzgrXlsydfwB3hi5N2sZRYtRGus9%2BFrlueMa3bSPXR9LGKHDbW8vrBf8rUw6JV7J%2BxOoMyL5xikeZxBjL7NEItnx88mkjvKUQKfl9nBb1IV1MAoyC4s9g0Xn1Zy6rrmNmnw4jpF22K55FzvbEAHJeGvdd2YKVAdt8Pg8K7ZY%2FmXyxLQFPmQQG9crGWhvg08m%2Fwj1xQ%3D%3D&trade_no=2019031922001445111000001002&auth_app_id=2016092800612139&version=1.0&app_id=2016092800612139&sign_type=RSA2&seller_id=2088102177580430&timestamp=2019-03-19+14%3A42%3A34 => generated 147 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)

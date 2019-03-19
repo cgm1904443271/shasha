@@ -256,7 +256,7 @@ CREATE TABLE `django_migrations` (
   `name` varchar(255) NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -265,7 +265,7 @@ CREATE TABLE `django_migrations` (
 
 LOCK TABLES `django_migrations` WRITE;
 /*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
-INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2019-03-15 03:21:42.482700'),(2,'auth','0001_initial','2019-03-15 03:21:54.040958'),(3,'admin','0001_initial','2019-03-15 03:21:56.371372'),(4,'admin','0002_logentry_remove_auto_add','2019-03-15 03:21:56.506270'),(5,'contenttypes','0002_remove_content_type_name','2019-03-15 03:21:57.974674'),(6,'auth','0002_alter_permission_name_max_length','2019-03-15 03:21:58.131612'),(7,'auth','0003_alter_user_email_max_length','2019-03-15 03:21:58.279593'),(8,'auth','0004_alter_user_username_opts','2019-03-15 03:21:58.335925'),(9,'auth','0005_alter_user_last_login_null','2019-03-15 03:21:59.030400'),(10,'auth','0006_require_contenttypes_0002','2019-03-15 03:21:59.086358'),(11,'auth','0007_alter_validators_add_error_messages','2019-03-15 03:21:59.154423'),(12,'auth','0008_alter_user_username_max_length','2019-03-15 03:21:59.321245'),(13,'sessions','0001_initial','2019-03-15 03:21:59.994993'),(14,'shasha','0001_initial','2019-03-15 03:22:01.117328'),(15,'shasha','0002_auto_20190315_0352','2019-03-15 03:52:40.651482'),(16,'shasha','0003_cart','2019-03-16 02:32:51.635134'),(17,'shasha','0004_order_ordergoods','2019-03-17 08:00:29.356652');
+INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2019-03-15 03:21:42.482700'),(2,'auth','0001_initial','2019-03-15 03:21:54.040958'),(3,'admin','0001_initial','2019-03-15 03:21:56.371372'),(4,'admin','0002_logentry_remove_auto_add','2019-03-15 03:21:56.506270'),(5,'contenttypes','0002_remove_content_type_name','2019-03-15 03:21:57.974674'),(6,'auth','0002_alter_permission_name_max_length','2019-03-15 03:21:58.131612'),(7,'auth','0003_alter_user_email_max_length','2019-03-15 03:21:58.279593'),(8,'auth','0004_alter_user_username_opts','2019-03-15 03:21:58.335925'),(9,'auth','0005_alter_user_last_login_null','2019-03-15 03:21:59.030400'),(10,'auth','0006_require_contenttypes_0002','2019-03-15 03:21:59.086358'),(11,'auth','0007_alter_validators_add_error_messages','2019-03-15 03:21:59.154423'),(12,'auth','0008_alter_user_username_max_length','2019-03-15 03:21:59.321245'),(13,'sessions','0001_initial','2019-03-15 03:21:59.994993'),(14,'shasha','0001_initial','2019-03-15 03:22:01.117328'),(15,'shasha','0002_auto_20190315_0352','2019-03-15 03:52:40.651482'),(16,'shasha','0003_cart','2019-03-16 02:32:51.635134'),(17,'shasha','0004_order_ordergoods','2019-03-17 08:00:29.356652'),(18,'shasha','0005_cart_selection','2019-03-18 11:03:53.756781'),(19,'shasha','0006_auto_20190318_1309','2019-03-18 13:09:12.153316'),(20,'shasha','0007_cart_selectionall','2019-03-19 03:02:18.507255');
 /*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -291,7 +291,7 @@ CREATE TABLE `django_session` (
 
 LOCK TABLES `django_session` WRITE;
 /*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
-INSERT INTO `django_session` VALUES ('6ksqq7ny3yppfr5dos60vmir0w7t7hks','NWIzYjllOTlkNDM2MGQ1YWMxMmIwZGRlNGNiOGRlN2RmOWFhYmM4Njp7InRva2VuIjoiOWY2YzgzY2M3ZjM3ZWJiZTUwYzdlN2YwMjRlZDZmMjMifQ==','2019-03-30 02:28:19.154571'),('a7rim5g32zd164n6qrpzg11nw1qxnijc','NGQ5ZmNjNTYyZjgzYTgzMTAyZDk3ZjAwNjFlYzBhYjE1OTI5MjdjMDp7InRva2VuIjoiNjJiZTZmNDg1ZTdmYTFlOGNhMTIyMmVkNDJmNDk0NTcifQ==','2019-03-31 13:06:08.049109'),('wdngtmfilvq24e5ae8m11dm6x3cdsd7q','YmRkODE5NmZjMzQ0ZjYxNWI4YzQzMGRkMGU1YjdmNWJhNGJhYjkyMTp7InRva2VuIjoiMTlhNDM1MzM2NDk1YjgxYTAxMDAzZTFmNmM1MGRlZGIifQ==','2019-03-30 08:10:11.925880');
+INSERT INTO `django_session` VALUES ('6ksqq7ny3yppfr5dos60vmir0w7t7hks','NWIzYjllOTlkNDM2MGQ1YWMxMmIwZGRlNGNiOGRlN2RmOWFhYmM4Njp7InRva2VuIjoiOWY2YzgzY2M3ZjM3ZWJiZTUwYzdlN2YwMjRlZDZmMjMifQ==','2019-03-30 02:28:19.154571'),('826ezqeo86khcxk05uqrzlszt6rs3a8x','ZGQ2ZTcwMTg5MWVhMjhkNTg5YWMxYzNiODRiZTZlMWMzY2EyMmY5NTp7InRva2VuIjoiZWM1NmMzY2NiMjQ0ZDRhNzc0YTk3OTU3Mjg1NGI5NjIifQ==','2019-04-02 06:09:31.306807'),('wdngtmfilvq24e5ae8m11dm6x3cdsd7q','YmRkODE5NmZjMzQ0ZjYxNWI4YzQzMGRkMGU1YjdmNWJhNGJhYjkyMTp7InRva2VuIjoiMTlhNDM1MzM2NDk1YjgxYTAxMDAzZTFmNmM1MGRlZGIifQ==','2019-03-30 08:10:11.925880');
 /*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -307,12 +307,14 @@ CREATE TABLE `ss_cart` (
   `number` int(11) NOT NULL,
   `goods_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
+  `selection` int(11) NOT NULL,
+  `selectionall` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `ss_cart_goods_id_f963f862_fk_ss_goods_id` (`goods_id`),
   KEY `ss_cart_user_id_c4564175_fk_ss_user_id` (`user_id`),
   CONSTRAINT `ss_cart_goods_id_f963f862_fk_ss_goods_id` FOREIGN KEY (`goods_id`) REFERENCES `ss_goods` (`id`),
   CONSTRAINT `ss_cart_user_id_c4564175_fk_ss_user_id` FOREIGN KEY (`user_id`) REFERENCES `ss_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -321,7 +323,6 @@ CREATE TABLE `ss_cart` (
 
 LOCK TABLES `ss_cart` WRITE;
 /*!40000 ALTER TABLE `ss_cart` DISABLE KEYS */;
-INSERT INTO `ss_cart` VALUES (33,2,2,5),(36,0,2,3);
 /*!40000 ALTER TABLE `ss_cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -397,7 +398,7 @@ CREATE TABLE `ss_order` (
   PRIMARY KEY (`id`),
   KEY `ss_order_user_id_9e00f371_fk_ss_user_id` (`user_id`),
   CONSTRAINT `ss_order_user_id_9e00f371_fk_ss_user_id` FOREIGN KEY (`user_id`) REFERENCES `ss_user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -406,7 +407,7 @@ CREATE TABLE `ss_order` (
 
 LOCK TABLES `ss_order` WRITE;
 /*!40000 ALTER TABLE `ss_order` DISABLE KEYS */;
-INSERT INTO `ss_order` VALUES (27,'2019-03-17 10:05:48.094566','2019-03-17 10:05:48.094661',0,'21956084',3),(28,'2019-03-17 12:39:52.760555','2019-03-17 12:39:52.760624',0,'76898087',3),(29,'2019-03-17 12:40:52.897968','2019-03-17 12:40:52.898034',0,'64381689',3),(30,'2019-03-17 12:46:23.680805','2019-03-17 12:46:23.680870',0,'41024058',4),(31,'2019-03-17 12:46:26.831633','2019-03-17 12:46:26.831703',0,'96419760',4),(32,'2019-03-17 12:46:29.887613','2019-03-17 12:46:29.887684',0,'19016352',4),(33,'2019-03-17 12:49:55.098642','2019-03-17 12:49:55.098708',0,'51375509',4),(34,'2019-03-17 12:51:21.947554','2019-03-17 12:51:21.947623',0,'85243654',5),(35,'2019-03-17 13:06:44.160755','2019-03-17 13:06:44.160824',0,'47092634',3);
+INSERT INTO `ss_order` VALUES (17,'2019-03-19 06:13:14.606758','2019-03-19 06:13:14.606826',0,'81996130',1);
 /*!40000 ALTER TABLE `ss_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -427,7 +428,7 @@ CREATE TABLE `ss_ordergood` (
   KEY `ss_ordergood_order_id_0bc1be9f_fk_ss_order_id` (`order_id`),
   CONSTRAINT `ss_ordergood_goods_id_081126f2_fk_ss_goods_id` FOREIGN KEY (`goods_id`) REFERENCES `ss_goods` (`id`),
   CONSTRAINT `ss_ordergood_order_id_0bc1be9f_fk_ss_order_id` FOREIGN KEY (`order_id`) REFERENCES `ss_order` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -436,7 +437,7 @@ CREATE TABLE `ss_ordergood` (
 
 LOCK TABLES `ss_ordergood` WRITE;
 /*!40000 ALTER TABLE `ss_ordergood` DISABLE KEYS */;
-INSERT INTO `ss_ordergood` VALUES (7,1,3,27),(8,1,1,28),(9,6,5,29),(10,3,4,33),(11,1,3,33),(12,3,2,34),(13,1,1,35),(14,1,2,35);
+INSERT INTO `ss_ordergood` VALUES (9,3,3,17),(10,1,1,17),(11,1,2,17);
 /*!40000 ALTER TABLE `ss_ordergood` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -453,7 +454,7 @@ CREATE TABLE `ss_user` (
   `password` varchar(100) NOT NULL,
   `token` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -462,7 +463,7 @@ CREATE TABLE `ss_user` (
 
 LOCK TABLES `ss_user` WRITE;
 /*!40000 ALTER TABLE `ss_user` DISABLE KEYS */;
-INSERT INTO `ss_user` VALUES (1,'15180281403','123456','2b717e8e4aaabfc4af59d10d9293642d'),(2,'15758596875','123456','e48d09c0541aa4e53ee81d94bf4eb327'),(3,'15270789963','123456','62be6f485e7fa1e8ca1222ed42f49457'),(4,'13250613494','123456','a1e90848ca9a2d40a5e460f5756442db'),(5,'15788965656','123456','dd869ca4f4810cd92b14d5ac7bc67ce6');
+INSERT INTO `ss_user` VALUES (1,'15180281403','123456','ec56c3ccb244d4a774a979572854b962'),(2,'15758596875','123456','e48d09c0541aa4e53ee81d94bf4eb327'),(3,'15270789963','123456','62be6f485e7fa1e8ca1222ed42f49457'),(4,'13250613494','123456','a1e90848ca9a2d40a5e460f5756442db'),(5,'15788965656','123456','dd869ca4f4810cd92b14d5ac7bc67ce6'),(6,'13250613991','441621','a67ca426f790865bf8b0416db286d26e');
 /*!40000 ALTER TABLE `ss_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -475,4 +476,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-18  9:18:39
+-- Dump completed on 2019-03-19 14:17:00

@@ -43,7 +43,8 @@ $(function () {
             'goodid':$(this).attr('data-goodid')
         }
         var that = $(this)
-        $.get('/shasha/pay',request_data,function (response) {
+        $.get('/shasha/payy',request_data,function (response) {
+            // console.log(111)
             if (response.selection==1){
                 that.removeClass('paytb').addClass('pay')
                 $('.ui-cart-total').html(response.price1)
