@@ -34,6 +34,8 @@ class Cart(models.Model):
     user = models.ForeignKey(User)
     goods = models.ForeignKey(Goods)
     number = models.IntegerField()
+    selection = models.IntegerField(default=1)
+
 
     class Meta:
         db_table='ss_cart'

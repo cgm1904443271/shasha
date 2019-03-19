@@ -43,7 +43,7 @@
 						<div class="sidecart-text">
 							<a href="">
 								<i class="iconfont"></i>购物车
-								<b><span>0</span></b>
+								<b><span class="kkk">0</span></b>
 							</a>
 						</div>
 						<div class="sidecart-cont"></div>
@@ -193,7 +193,7 @@
 				<div class="top_cart">
 					<div class="cart_bar">
 						<div class="cart_title">
-							<a href="{% url 'shasha:showcart' %}">我的购物车</a>
+							<a href="{% url 'shasha:cart' %}">我的购物车</a>
 						</div>
 						<div></div>
 					</div>
@@ -691,19 +691,19 @@
 												<span class="item-content">
 													<span class="p-quantity">
 		{% if yyy %}
-            <span class="btn-decrease"  data-goodid="{{ good.id }}" href="{% url 'shasha:showcart' %}" style="font-size: 50px;margin: 10px" >-</span>
+            <span class="btn-decrease"  data-goodid="{{ good.id }}"  style="font-size: 50px;margin: 10px" >-</span>
         {% else %}
              <a class="btn-decrease"  data-goodid="{{ good.id }}" href="{% url 'shasha:showcart' %}">-</a>
         {% endif %}
 
         {% if num %}
-            <span class="action-quantity-input" style="font-size: 50px;margin: 10px">{{ num }}</span>
+            <span class="action-quantity-input" style="font-size: 50px;margin: 10px">0</span>
         {% else %}
             <span class="action-quantity-input" style="font-size: 50px;margin: 10px"></span>
         {% endif %}
                                                         
         {% if yyy %}
-            <span class="btn-increase"  data-goodid="{{ good.id }}" href="{% url 'shasha:showcart' %}" style="font-size: 50px;margin: 10px" >+</span>
+            <span class="btn-increase"  data-goodid="{{ good.id }}" style="font-size: 50px;margin: 10px" >+</span>
         {% else %}
             <a class="btn-increase"  data-goodid="{{ good.id }}" href="{% url 'shasha:showcart' %}">+</a>
         {% endif %}
@@ -728,12 +728,12 @@
 											<!--购买按钮-->
 											<li class="product-buy-action">
 												<span id="buy_btn">
-													<a class="btn btn-major btn-huge action-addtocart" href="{% url 'shasha:generateorder' %}" ><span><span>立即抢购</span></span>
+													<a class="btn btn-major btn-huge action-addtocart" href="{% url 'shasha:cart' %}" ><span><span>进入购物车</span></span>
 												</a>
 												</span>
 												<span class="code-pro pop-wrapper action-scanbuy">
-        												<a href="{% url 'shasha:cart' %}">查看购物车
-        												</a>
+        												<span data-goodid="{{ good.id }}" class="add-cart">加入购物车
+        												</span>
 	    												<div class="pop-body" style="display: none;">
 {#	      												<img src="{% static  'img/product/code.png'  %}" alt="商品二维码" width="196" height="196">#}
 	   												</div>

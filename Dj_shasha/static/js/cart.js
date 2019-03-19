@@ -9,25 +9,29 @@ $(function () {
 
 
     //加操作
+    var num=0
         $(function () {
             $('.btn-increase').click(function () {
-                var that=$(this)
-                request_data = {
-                    'goodid':$(this).attr('data-goodid')
-                }
-                $.get('/shasha/showcart/',request_data,function (response) {
-                    if (response) {
-                        // console.log (response)
-                        if (response.status == 1) {
-                            that.prev().html(response.number)
 
-                            that.prev().show()
-                            that.prev().prev().show()
-                        }else{
-                        $(window).attr(location,'/shasha/login/')
-                    }
-                    }
-                })
+                    num++
+                    console.log(num)
+                    $(this).prev().html(num)
+                // request_data = {
+                //     'goodid':$(this).attr('data-goodid')
+                // }
+                // $.get('/shasha/showcart/',request_data,function (response) {
+                //     if (response) {
+                //         // console.log (response)
+                //         if (response.status == 1) {
+                //             that.prev().html(response.number)
+                //
+                //             that.prev().show()
+                //             that.prev().prev().show()
+                //         }else{
+                //         $(window).attr(location,'/shasha/login/')
+                //     }
+                //     }
+                // })
             })
         })
 
@@ -35,20 +39,27 @@ $(function () {
 
         $(function () {
             $('.btn-decrease').click(function () {
-                var that=$(this)
-                request_data = {
-                    'goodid':$(this).attr('data-goodid')
-                }
-                $.get('/shasha/subcart/',request_data,function (response) {
-                    // console.log (response)
-                    if (response.number>0){
-                        that.next().html(response.number)
-                    } else {
-                        that.next().hide()
-                        that.hide()
+                num--
+                    if (num<=0){
+                        num=0
+                        $(this).next().html(num)
                     }
-                })
+
+        //         var that=$(this)
+        //         request_data = {
+        //             'goodid':$(this).attr('data-goodid')
+        //         }
+        //         $.get('/shasha/subcart/',request_data,function (response) {
+        //             // console.log (response)
+        //             if (response.number>0){
+        //                 that.next().html(response.number)
+        //             } else {
+        //                 that.next().hide()
+        //                 that.hide()
+        //             }
+        //         })
             })
+
         })
     // $.get('/shasha/subcart/',request_data,function (response) {
     //         if (response.number>0){
@@ -56,6 +67,24 @@ $(function () {
     //             $('.action-quantity-input').prev().show()
     //         }
     // })
+        $(function () {
+            $('.add-cart').click(function () {
+                    request_data = {
+                        'goodid':$(this).attr('data-goodid'),
+                        'num':num
+                    }
+           $.get('/shasha/addcart/',request_data,function (response) {
+               if (response.status==1){
+                   $('.action-quantity-input').html(0)
+
+               }
+               $('.kkk').html(response.numbers)
+           })
+                num=0
+
+            })
+        })
+
 
     })
 
@@ -73,3 +102,12 @@ $(function () {
 //
 //
 // })
+//         request_data = {
+//                         'goodid':goodid,
+//                         'num':number
+//                     }
+//            $.get('/shasha/addcart/',request_data,function (response) {
+//                if (response.status==1){
+//                    $('.action-quantity-input').html(response.number)
+//                }
+//            })

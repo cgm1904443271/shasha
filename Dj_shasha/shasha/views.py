@@ -6,6 +6,7 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
+# from shasha.alipay import alipay
 from shasha.models import Img, User, Goods, Cart, Order, OrderGoods
 
 
@@ -95,9 +96,10 @@ def jump(request,a):
         return render(request,'Product Details.html',context={'good':good})
 
 
-def showcart(request):
+def addcart(request):
     token = request.session.get('token')
     if token:
+        num = request.GET.get('num')
         goodid = request.GET.get('goodid')
         user = User.objects.get(token=token)
         goods = Goods.objects.get(pk=goodid)
@@ -105,19 +107,25 @@ def showcart(request):
         carts = Cart.objects.filter(user=user).filter(goods=goods)
         if carts.exists():
             cart=carts.first()
-            cart.number +=1
+            cart.number+=int(num)
             cart.save()
         else:
             cart = Cart()
             cart.user=user
             cart.goods=goods
-            cart.number=1
+            cart.number=num
             cart.save()
+
+        cartss = Cart.objects.all()
+        numbers=0
+        for item in cartss:
+            numbers+=item.number
 
         response_data={
             'msg':'111',
             'number':cart.number,
-            'status':1
+            'status':1,
+            'numbers':numbers
         }
 
         return JsonResponse(response_data)
@@ -125,29 +133,110 @@ def showcart(request):
         return render(request,'login.html')
 
 
+def showcart(request):
+        goodid = request.GET.get('goodid')
+        goods = Goods.objects.get(pk=goodid)
+        token = request.session.get('token')
+        user = User.objects.get(token=token)
+        cart = Cart.objects.filter(user=user).filter(goods=goods).first()
+        cart.number+=1
+        cart.save()
+
+        cartss = Cart.objects.filter(user=user)
+        carts = []
+        for item in cartss:
+            if item.number > 0:
+                carts.append(item)
+
+        price = 0
+        sums=0
+        for i in range(len(carts)):
+            card1 = carts[i]
+            sun = card1.number
+            sums+=sun
+            p = float(card1.goods.price) * int(sun)
+            price += p
+
+        response_data={
+            'msg':'111',
+            'number':cart.number,
+            'status':1,
+            'prices':price,
+            'sums':sums
+        }
+
+        return JsonResponse(response_data)
+
+
+
 
 def subcart(request):
     goodid = request.GET.get('goodid')
+    goods = Goods.objects.get(pk=goodid)
     token = request.session.get('token')
-    if token:
-        user = User.objects.get(token=token)
-        goods = Goods.objects.get(pk=goodid)
+    user = User.objects.get(token=token)
 
-        cart = Cart.objects.filter(user=user).filter(goods=goods).first()
-
-        cart.number -=1
-        num = cart.number
-        if num <=0:
-            num=0
-        cart.number=num
+    cart = Cart.objects.filter(goods=goods).filter(user=user).first()
+    cart.number -= 1
+    cart.save()
+    if cart.number<=0:
+        cart.number=0
         cart.save()
+
+    cartss = Cart.objects.filter(user=user)
+    carts = []
+    for item in cartss:
+        if item.number > 0:
+            carts.append(item)
+
+    price = 0
+    sums = 0
+    for i in range(len(carts)):
+        card1 = carts[i]
+        sun = card1.number
+        sums += sun
+        p = float(card1.goods.price) * int(sun)
+        price += p
+
+    response_data = {
+        'msg': '111',
+        'number': cart.number,
+        'status': 1,
+        'prices': price,
+        'sums': sums
+    }
+
+    return JsonResponse(response_data)
+
+
+def pay(request):
+    token = request.session.get('token')
+    user = User.objects.get(token=token)
+    goodid = request.GET.get('goodid')
+    goods = Goods.objects.get(pk=goodid)
+
+    cart = Cart.objects.filter(user=user).filter(goods=goods).first()
+    if cart.selection==1:
+        cart.selection=0
+        cart.save()
+    else:
+        cart.selection=1
+        cart.save()
+    carts = Cart.objects.filter(user=user)
+    price = 0
+    num = 0
+    for item in carts:
+        if item.selection==1:
+            price+=float(item.goods.price)*int(item.number)
+            num+=item.number
+
 
 
     response_data={
-        'msg':'111',
-        'number':cart.number,
+        'selection':cart.selection,
+        'price1':price,
+        'num1':num
     }
-
 
     return JsonResponse(response_data)
 
@@ -173,7 +262,6 @@ def cart(request):
             p = float(cart.goods.price)*int(m)
             numbers +=m
             price +=p
-            goodid = cart.goods.id
 
 
         return render(request, 'Shopping Cart.html', context={
@@ -193,28 +281,34 @@ def generate_number():
 
 def generateorder(request):
     token = request.session.get('token')
-    user = User.objects.get(token=token)
+    if token:
+        user = User.objects.get(token=token)
 
-    order = Order()
-    order.user = user
-    order.order_number = generate_number()
-    order.save()
+        carts = user.cart_set.filter(selection=1)
+        if carts.exists():
+            for cart in carts:
+                if cart.number=='0':
+                    cart.delete()
 
-    carts = user.cart_set.filter(number__gt=0)
-    if carts.exists():
-        for cart in carts:
-            orderGoods = OrderGoods()
-            orderGoods.order = order
-            orderGoods.goods = cart.goods
-            orderGoods.number = cart.number
-            orderGoods.save()
+                else:
+                    order = Order()
+                    order.user = user
+                    order.order_number = generate_number()
+                    order.save()
 
-            cart.delete()
+                    orderGoods = OrderGoods()
+                    orderGoods.order = order
+                    orderGoods.goods = cart.goods
+                    orderGoods.number = cart.number
+                    orderGoods.save()
 
+                    cart.delete()
 
-        return render(request,'ordertail.html',context={'order':order})
+            return render(request,'ordertail.html',context={'order':order})
+        else:
+            return render(request,'Shopping Cart.html')
     else:
-        return render(request,'Shopping Cart.html')
+        return redirect('shasha:login')
 
 
 def orderlist(request):
@@ -232,3 +326,44 @@ def orderdetail(request,order_number):
     order = Order.objects.get(order_number=order_number)
 
     return render(request,'ordertail.html',context={'order':order})
+
+
+def returnurl(request):
+    return render(request,'orderlist.html')
+
+
+def app_notify_url(request):
+    print('支付成功')
+    return JsonResponse({'msg':'success'})
+
+
+# def pay(request):
+#     # print(request.GET.get('orderid'))
+#     orderid = request.GET.get('orderid')
+#     order = Order.objects.get(pk=orderid)
+#
+#     sum = 0
+#     for orderGoods in order.ordergoods_set.all():
+#         sum += orderGoods.goods.price*orderGoods.number
+#
+#     sum = float(sum)
+#     #支付地址信息
+#     data = alipay.direct_pay(
+#         subject='口红 [10000]->[100]', # 显示标题
+#         out_trade_no=order.order_number, # shasha订单号
+#         total_amount=sum, #支付金额
+#         return_url="http://47.100.99.45/shasha/returnurl/",
+#     )
+#     #支付地址
+#     alipay_url ='https://openapi.alipaydev.com/gateway.do?{data}'.format(data=data)
+#
+#     response_data={
+#         'msg':'调用支付接口',
+#         'alipayurl':alipay_url,
+#         'status':1
+#     }
+#
+#     return JsonResponse(response_data)
+
+
+

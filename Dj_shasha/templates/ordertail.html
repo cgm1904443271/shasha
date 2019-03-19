@@ -17,9 +17,11 @@
     {% endfor %}
 
 </ul>
-<button>支付</button>
+<button id="alipay" data-orderid="{{ order.id }}">支付</button>
 <p>
     <a href="{% url 'shasha:index' %}">返回首页</a>
 </p>
+<script src="{% static 'js/jquery-1.11.0.js' %}"></script>
+<script src="{% static 'js/ordertall.js' %}"></script>
 </body>
 </html>
